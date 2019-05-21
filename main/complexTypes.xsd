@@ -1,32 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:compl="http://math.uni.lodz.pl/stomatologia/complex">
-    <xs:import schemaLocation="common/commonComplexTypes.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:compl="http://math.uni.lodz.pl/stomatologia/complex"
+           xmlns:tns="http://math.uni.lodz.pl/stomatologia" targetNamespace="http://math.uni.lodz.pl/stomatologia"
+           elementFormDefault="qualified">
+    <xs:import namespace="http://math.uni.lodz.pl/stomatologia/complex" schemaLocation="common/commonComplexTypes.xsd"/>
 
-    <xs:element name="listaPacjentow">
+    <xs:complexType name="listaPacjentow">
+        <xs:sequence>
+            <xs:element name="pacjent" type="compl:pacjent" maxOccurs="unbounded">
+                <xs:key name="pacjentId">
+                    <xs:selector xpath="pacjent"/>
+                    <xs:field xpath="@id"/>
+                </xs:key>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="listaWizyt">
+        <xs:sequence>
+            <xs:element name="wizyta" type="compl:wizyta" maxOccurs="unbounded">
+                <xs:key name="wizytaId">
+                    <xs:selector xpath="wizyta"/>
+                    <xs:field xpath="@id"/>
+                </xs:key>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="listaPracownikow">
+        <xs:sequence>
+            <xs:element name="pracownik" type="compl:pracownik" maxOccurs="unbounded">
+                <xs:key name="lekarzId">
+                    <xs:selector xpath="lekarz"/>
+                    <xs:field xpath="@id"/>
+                </xs:key>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="terminarzWizyt">
+
+        <xs:sequence>
+            <xs:element name="termin" type="compl:termin"/>
+        </xs:sequence>
+
+    </xs:complexType>
+
+    <xs:complexType name="listaRecept">
+        <xs:sequence>
+            <xs:element name="recepta" type="compl:recepta"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="gabinetStomatologiczy">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="pacjent" type="compl:pacjent" maxOccurs="unbounded">
-                    <xs:unique name="id">
-                        <xs:selector xpath="."/>
-                        <xs:field xpath="@id"/>
-                    </xs:unique>
-                </xs:element>
+                <xs:element type="tns:listaPacjentow" name="listaPacjentow" minOccurs="0"/>
+                <xs:element type="tns:listaWizyt" name="listaWizyt" minOccurs="0"/>
+                <xs:element type="tns:listaPracownikow" name="listaPracownikow" minOccurs="0" />
+                <xs:element type="tns:listaRecept" name="listaRecept" minOccurs="0"/>
+                <xs:element type="tns:terminarzWizyt" name="terminarzWizyt" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-
-    <xs:element name="listaWizyt">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="wizyta" type="compl:wizyta" maxOccurs="unbounded">
-                    <xs:unique name="id">
-                        <xs:selector xpath="."/>
-                        <xs:field xpath="@id"/>
-                    </xs:unique>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-    
 </xs:schema>

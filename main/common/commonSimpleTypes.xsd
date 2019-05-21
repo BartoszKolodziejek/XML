@@ -47,4 +47,21 @@
             <xs:enumeration value="SRODWEZLOWE"/>
         </xs:restriction>
     </xs:simpleType>
+
+    <xs:simpleType name="rolaPraconika">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="POMOC"/>
+            <xs:enumeration value="RECJEPCJONISTKA"/>
+            <xs:enumeration value="SEKRETARKA"/>
+            <xs:enumeration value="TECHNIK"/>
+            <xs:enumeration value="SPRATACZKA"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="procent">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>
