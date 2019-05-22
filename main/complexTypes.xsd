@@ -8,9 +8,21 @@
         <xs:sequence>
             <xs:element name="pacjent" type="compl:pacjent" maxOccurs="unbounded">
                 <xs:key name="pacjentId">
-                    <xs:selector xpath="pacjent"/>
+                    <xs:selector xpath="gabinetStomatologiczy/listaPacjentow/pacjent"/>
                     <xs:field xpath="@id"/>
                 </xs:key>
+                <xs:keyref name="pacjentIdWizytyRef" refer="tns:pacjentId">
+                    <xs:selector xpath="gabinetStomatologiczy/listaWizyt/wizyta/pacjent"/>
+                    <xs:field xpath="@id"/>
+                </xs:keyref>
+                <xs:keyref name="pacjentIdTerminyRef" refer="tns:pacjentId">
+                    <xs:selector xpath="gabinetStomatologiczy/terminarzWizyt/termin/pacjent"/>
+                    <xs:field xpath="@id"/>
+                </xs:keyref>
+                <xs:keyref name="pacjentIdRecepty" refer="tns:pacjentId">
+                    <xs:selector xpath="gabinetStomatologiczy/listaRecept/recepta/pacjent"/>
+                    <xs:field xpath="@id"/>
+                </xs:keyref>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
@@ -22,6 +34,10 @@
                     <xs:selector xpath="wizyta"/>
                     <xs:field xpath="@id"/>
                 </xs:key>
+                <xs:keyref name="wizytaIdWizyty" refer="tns:wizytaId">
+                    <xs:selector xpath="gabinetStomatologiczy/listaRecept/recepta/wizyta"/>
+                    <xs:field xpath="@id"/>
+                </xs:keyref>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
@@ -30,15 +46,22 @@
         <xs:sequence>
             <xs:element name="pracownik" type="compl:pracownik" maxOccurs="unbounded">
                 <xs:key name="lekarzId">
-                    <xs:selector xpath="lekarz"/>
+                    <xs:selector xpath="gabinetStomatologiczy/listaPracownikow/pracownik"/>
                     <xs:field xpath="@id"/>
                 </xs:key>
+                <xs:keyref name="lekarzIdTerminy" refer="tns:lekarzId">
+                    <xs:selector xpath="gabinetStomatologiczy/terminarzWizyt/termin/lekarz"/>
+                    <xs:field xpath="@id"/>
+                </xs:keyref>
+                <xs:keyref name="lekarzIdRecepty" refer="tns:lekarzId">
+                    <xs:selector xpath="gabinetStomatologiczy/listaRecept/recepta/lekarz"/>
+                    <xs:field xpath="@id"/>
+                </xs:keyref>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="terminarzWizyt">
-
         <xs:sequence>
             <xs:element name="termin" type="compl:termin"/>
         </xs:sequence>

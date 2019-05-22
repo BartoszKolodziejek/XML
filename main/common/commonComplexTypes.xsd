@@ -25,12 +25,7 @@
 
     <xs:complexType name="wizyta">
         <xs:sequence>
-            <xs:element type="tns:pacjent" name="pacjent">
-                <xs:keyref name="pacjentIdWizyty" refer="pacjentId">
-                    <xs:selector xpath="main:gabinetStomatologiczy/listaPacjentow/pacjent"/>
-                    <xs:field xpath="@id"/>
-                </xs:keyref>
-            </xs:element>
+            <xs:element type="tns:pacjent" name="pacjent"/>
             <xs:element type="xs:dateTime" name="kiedy"/>
             <xs:element type="xs:string" name="opisUslugi"/>
             <xs:element type="tns:kwotaWaluta" name="cenaUslugi"/>
@@ -70,18 +65,8 @@
 
     <xs:complexType name="termin">
         <xs:sequence>
-            <xs:element type="tns:pacjent" name="pacjent">
-                <xs:keyref name="pacjentIdTerminy" refer="pacjentId">
-                    <xs:selector xpath="main:gabinetStomatologiczy/listaPacjentow/pacjent"/>
-                    <xs:field xpath="@id"/>
-                </xs:keyref>
-            </xs:element>
-            <xs:element type="tns:lekarz" name="lekarz">
-                <xs:keyref name="lekarzIdTerminy" refer="lekarzId">
-                    <xs:selector xpath="main:gabinetStomatologiczy/listaPracownikow/pracownik"/>
-                    <xs:field xpath="@id"/>
-                </xs:keyref>
-            </xs:element>
+            <xs:element type="tns:pacjent" name="pacjent"/>
+            <xs:element type="tns:lekarz" name="lekarz"/>
             <xs:element type="xs:dateTime" name="czas"/>
         </xs:sequence>
     </xs:complexType>
@@ -102,24 +87,9 @@
 
     <xs:complexType name="recepta">
         <xs:sequence>
-            <xs:element type="tns:pacjent" name="pacjent">
-                <xs:keyref name="pacjentIdRecepty" refer="main:pacjentId">
-                    <xs:selector xpath="main:gabinetStomatologiczy/listaPacjentow/pacjent"/>
-                    <xs:field xpath="@id"/>
-                </xs:keyref>
-            </xs:element>
-            <xs:element type="tns:lekarz" name="lekarz">
-                <xs:keyref name="lekarzIdRecepty" refer="lekarzId">
-                    <xs:selector xpath="main:gabinetStomatologiczy/listaPracownikow/pracownik"/>
-                    <xs:field xpath="@id"/>
-                </xs:keyref>
-            </xs:element>
-            <xs:element type="tns:wizyta" name="wizyta">
-                <xs:keyref name="wizytaIdWizyty" refer="wizytaId">
-                    <xs:selector xpath="main:gabinetStomatologiczy/listaWizyt/wizyta"/>
-                    <xs:field xpath="@id"/>
-                </xs:keyref>
-            </xs:element>
+            <xs:element type="tns:pacjent" name="pacjent"/>
+            <xs:element type="tns:lekarz" name="lekarz"/>
+            <xs:element type="tns:wizyta" name="wizyta"/>
             <xs:element type="xs:date" name="data"/>
             <xs:element name="listaLekow" type="tns:listaLekow"/>
         </xs:sequence>
