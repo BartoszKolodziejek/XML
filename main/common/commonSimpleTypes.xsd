@@ -48,7 +48,7 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="rolaPraconika">
+    <xs:simpleType name="rolaPracownika">
         <xs:restriction base="xs:string">
             <xs:enumeration value="POMOC"/>
             <xs:enumeration value="RECJEPCJONISTKA"/>
@@ -62,6 +62,55 @@
         <xs:restriction base="xs:decimal">
             <xs:minInclusive value="0"/>
             <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="usluga">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="USUWANIE"/>
+            <xs:enumeration value="PLOMBOWANIE"/>
+            <xs:enumeration value="LECZENIEKANALOWE"/>
+            <xs:enumeration value="WYBIELANIE"/>
+            <xs:enumeration value="PRZEGLAD"/>
+            <xs:enumeration value="RENTGEN"/>
+            <xs:enumeration value="LAKOWANIE"/>
+            <xs:enumeration value="ODBUDOWA"/>
+            <xs:enumeration value="LAKIEROWANIE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="sprzetDiagnostyczny">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DMUCHAWKI"/>
+            <xs:enumeration value="PIASKARKI"/>
+            <xs:enumeration value="SZYBKOZLACZKI"/>
+            <xs:enumeration value="OLEJ"/>
+            <xs:enumeration value="ZGRZEWARKA"/>
+            <xs:enumeration value="KONCOWKA_STANDARD"/>
+            <xs:enumeration value="KONCOWKA_PNEUMATYCZNA"/>
+            <xs:enumeration value="KONCOWKA_SZYBKO_OBROTOWA"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="materialyStomatologiczne">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ALGINATY"/>
+            <xs:enumeration value="AMALGAMATY"/>
+            <xs:enumeration value="CWIEKI_GUTAPERKOWE"/>
+            <xs:enumeration value="CWIEKI_PAPIEROWE"/>
+            <xs:enumeration value="KALKI_ARTYKULACYJNE"/>
+            <xs:enumeration value="NICI_RETRAKCYJNE"/>
+            <xs:enumeration value="PASTY_POLERSKIE"/>
+            <xs:enumeration value="TASMA_POLIESTROWA"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="rodzajKontaktu">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PLATFORMA_ONLINE"/>
+            <xs:enumeration value="SMS"/>
+            <xs:enumeration value="ROZMOWA_TELEFONICZNA"/>
+            <xs:enumeration value="EMAIL"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
