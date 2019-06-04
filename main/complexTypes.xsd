@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:compl="http://math.uni.lodz.pl/stomatologia/complex"
            xmlns:tns="http://math.uni.lodz.pl/stomatologia" targetNamespace="http://math.uni.lodz.pl/stomatologia"
            elementFormDefault="qualified">
-    <xs:import namespace="http://math.uni.lodz.pl/stomatologia/complex" schemaLocation="common/commonComplexTypes.xsd"/>
+    <xs:import namespace="http://math.uni.lodz.pl/stomatologia/complex" schemaLocation="commonComplexTypes.xsd"/>
 
     <xs:complexType name="listaPacjentow">
         <xs:sequence>
@@ -21,6 +21,10 @@
                 </xs:keyref>
                 <xs:keyref name="pacjentIdRecepty" refer="tns:pacjentId">
                     <xs:selector xpath="gabinetStomatologiczy/listaRecept/recepta/pacjent"/>
+                    <xs:field xpath="@id"/>
+                </xs:keyref>
+                <xs:keyref name="pacjentIdUslugi" refer="tns:lekarzId">
+                    <xs:selector xpath="gabinetStomatologiczy/listaUslug/usluga/lekarz"/>
                     <xs:field xpath="@id"/>
                 </xs:keyref>
             </xs:element>
@@ -57,6 +61,10 @@
                     <xs:selector xpath="gabinetStomatologiczy/listaRecept/recepta/lekarz"/>
                     <xs:field xpath="@id"/>
                 </xs:keyref>
+                <xs:keyref name="lekarzIdUslugi" refer="tns:lekarzId">
+                    <xs:selector xpath="gabinetStomatologiczy/listaUslug/usluga/lekarz"/>
+                    <xs:field xpath="@id"/>
+                </xs:keyref>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
@@ -65,12 +73,23 @@
         <xs:sequence>
             <xs:element name="termin" type="compl:termin"/>
         </xs:sequence>
+    </xs:complexType>
 
+    <xs:complexType name="listaWolnychTerminow">
+        <xs:sequence>
+            <xs:element name="wolnyTermin" type="compl:wolnyTermin"/>
+        </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="listaRecept">
         <xs:sequence>
             <xs:element name="recepta" type="compl:recepta"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="listaUslug">
+        <xs:sequence>
+            <xs:element name="usluga" type="compl:usluga"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -82,6 +101,8 @@
                 <xs:element type="tns:listaPracownikow" name="listaPracownikow" minOccurs="0" />
                 <xs:element type="tns:listaRecept" name="listaRecept" minOccurs="0"/>
                 <xs:element type="tns:terminarzWizyt" name="terminarzWizyt" minOccurs="0"/>
+                <xs:element type="tns:listaUslug" name="listaUslug" minOccurs="0" />
+                <xs:element type="tns:listaWolnychTerminow" name="wolneTerminy" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
