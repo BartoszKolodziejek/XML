@@ -22,20 +22,6 @@
       <kiedy>2006-08-19T19:27:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>PLOMBOWANIE</nazwa>
-        <pacjent id="10">
-          <imie>string</imie>
-          <nazwisko>string</nazwisko>
-          <pesel>string</pesel>
-          <dataRejestracji>2013-05-22+02:00</dataRejestracji>
-        </pacjent>
-        <lekarz id="10">
-          <placa>
-            <kwota>1000.00</kwota>
-            <waluta>string</waluta>
-          </placa>
-          <rolaPracownika>string</rolaPracownika>
-        </lekarz>
-        <data>2002-11-05+01:00</data>
         <listaLekow>
           <!--1 or more repetitions:-->
           <lek>
@@ -49,19 +35,19 @@
         <kwota>1000.00</kwota>
         <waluta>string</waluta>
       </cenaUslugi>
-      <rodzajPlatnosci>BLIK</rodzajPlatnosci>
+      <rodzajPlatnosci>NFZ</rodzajPlatnosci>
       <!--1 or more repetitions:-->
-      <zuzytySprzetDiagnostyczny>KONCOWKA_SZYBKO_OBROTOWA</zuzytySprzetDiagnostyczny>
+      <zuzytySprzetDiagnostyczny>PIASKARKI</zuzytySprzetDiagnostyczny>
       <!--1 or more repetitions:-->
       <zuzyteMaterialyStomatologiczne>TASMA_POLIESTROWA</zuzyteMaterialyStomatologiczne>
       <!--1 or more repetitions:-->
-      <znieczulenia>SRODWEZLOWE</znieczulenia>
+      <znieczulenia>NASIEKOWE</znieczulenia>
       <kontaktPoWizycie>
         <pacjent id="10">
           <imie>string</imie>
           <nazwisko>string</nazwisko>
           <pesel>string</pesel>
-          <dataRejestracji>2012-01-07</dataRejestracji>
+          <dataRejestracji>2013-12-21+01:00</dataRejestracji>
         </pacjent>
         <lekarz id="10">
           <placa>
@@ -70,7 +56,7 @@
           </placa>
           <rolaPracownika>string</rolaPracownika>
         </lekarz>
-        <rodzajKontaktu>PLATFORMA_ONLINE</rodzajKontaktu>
+        <rodzajKontaktu>EMAIL</rodzajKontaktu>
         <wiadomosc>string</wiadomosc>
       </kontaktPoWizycie>
     </stom:wizyta>
@@ -92,7 +78,7 @@
         <imie>string</imie>
         <nazwisko>string</nazwisko>
         <pesel>string</pesel>
-        <dataRejestracji>2018-12-28+01:00</dataRejestracji>
+        <dataRejestracji>2009-10-14</dataRejestracji>
       </pacjent>
       <lekarz id="10">
         <placa>
@@ -106,25 +92,11 @@
           <imie>string</imie>
           <nazwisko>string</nazwisko>
           <pesel>string</pesel>
-          <dataRejestracji>2017-11-01+01:00</dataRejestracji>
+          <dataRejestracji>2010-03-18</dataRejestracji>
         </pacjent>
-        <kiedy>2014-06-10T20:33:25+02:00</kiedy>
+        <kiedy>2018-12-28T20:51:14+01:00</kiedy>
         <opisUslugi>
-          <nazwa>PRZEGLAD</nazwa>
-          <pacjent id="10">
-            <imie>string</imie>
-            <nazwisko>string</nazwisko>
-            <pesel>string</pesel>
-            <dataRejestracji>2015-08-24</dataRejestracji>
-          </pacjent>
-          <lekarz id="10">
-            <placa>
-              <kwota>1000.00</kwota>
-              <waluta>string</waluta>
-            </placa>
-            <rolaPracownika>string</rolaPracownika>
-          </lekarz>
-          <data>2015-06-18+02:00</data>
+          <nazwa>LAKIEROWANIE</nazwa>
           <listaLekow>
             <!--1 or more repetitions:-->
             <lek>
@@ -138,19 +110,19 @@
           <kwota>1000.00</kwota>
           <waluta>string</waluta>
         </cenaUslugi>
-        <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
+        <rodzajPlatnosci>BLIK</rodzajPlatnosci>
         <!--1 or more repetitions:-->
-        <zuzytySprzetDiagnostyczny>OLEJ</zuzytySprzetDiagnostyczny>
+        <zuzytySprzetDiagnostyczny>ZGRZEWARKA</zuzytySprzetDiagnostyczny>
         <!--1 or more repetitions:-->
         <zuzyteMaterialyStomatologiczne>PASTY_POLERSKIE</zuzyteMaterialyStomatologiczne>
         <!--1 or more repetitions:-->
-        <znieczulenia>NASIEKOWE</znieczulenia>
+        <znieczulenia>PRZEWODOWE</znieczulenia>
         <kontaktPoWizycie>
           <pacjent id="10">
             <imie>string</imie>
             <nazwisko>string</nazwisko>
             <pesel>string</pesel>
-            <dataRejestracji>2012-04-24+02:00</dataRejestracji>
+            <dataRejestracji>2006-11-29</dataRejestracji>
           </pacjent>
           <lekarz id="10">
             <placa>
@@ -159,11 +131,11 @@
             </placa>
             <rolaPracownika>string</rolaPracownika>
           </lekarz>
-          <rodzajKontaktu>PLATFORMA_ONLINE</rodzajKontaktu>
+          <rodzajKontaktu>EMAIL</rodzajKontaktu>
           <wiadomosc>string</wiadomosc>
         </kontaktPoWizycie>
       </wizyta>
-      <data>2017-08-18</data>
+      <data>2000-09-25</data>
       <listaLekow>
         <!--1 or more repetitions:-->
         <lek>
@@ -181,7 +153,7 @@
         <imie>string</imie>
         <nazwisko>string</nazwisko>
         <pesel>string</pesel>
-        <dataRejestracji>2016-09-11</dataRejestracji>
+        <dataRejestracji>2015-11-05</dataRejestracji>
       </pacjent>
       <lekarz id="10">
         <placa>
@@ -190,44 +162,31 @@
         </placa>
         <rolaPracownika>string</rolaPracownika>
       </lekarz>
-      <czas>2005-01-22T00:35:36+01:00</czas>
+      <czas>2017-10-20T03:04:37</czas>
     </stom:termin>
   </stom:terminarzWizyt>
   <!--Optional:-->
   <stom:listaUslug>
     <stom:usluga>
-      <nazwa>ODBUDOWA</nazwa>
-      <pacjent id="10">
-        <imie>string</imie>
-        <nazwisko>string</nazwisko>
-        <pesel>string</pesel>
-        <dataRejestracji>2004-12-06+01:00</dataRejestracji>
-      </pacjent>
-      <lekarz id="10">
-        <placa>
-          <kwota>1000.00</kwota>
-          <waluta>string</waluta>
-        </placa>
-        <rolaPracownika>string</rolaPracownika>
-      </lekarz>
+      <nazwa>WYBIELANIE</nazwa>
       <wizyta id="10">
         <pacjent id="10">
           <imie>string</imie>
           <nazwisko>string</nazwisko>
           <pesel>string</pesel>
-          <dataRejestracji>2006-12-05</dataRejestracji>
+          <dataRejestracji>2008-08-06+02:00</dataRejestracji>
         </pacjent>
-        <kiedy>2016-09-11T15:29:58</kiedy>
+        <kiedy>2011-12-25T03:49:17</kiedy>
         <opisUslugi/>
         <cenaUslugi>
           <kwota>1000.00</kwota>
           <waluta>string</waluta>
         </cenaUslugi>
-        <rodzajPlatnosci>NFZ</rodzajPlatnosci>
+        <rodzajPlatnosci>KARTA</rodzajPlatnosci>
         <!--1 or more repetitions:-->
-        <zuzytySprzetDiagnostyczny>PIASKARKI</zuzytySprzetDiagnostyczny>
+        <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
         <!--1 or more repetitions:-->
-        <zuzyteMaterialyStomatologiczne>CWIEKI_PAPIEROWE</zuzyteMaterialyStomatologiczne>
+        <zuzyteMaterialyStomatologiczne>KALKI_ARTYKULACYJNE</zuzyteMaterialyStomatologiczne>
         <!--1 or more repetitions:-->
         <znieczulenia>PRZEWODOWE</znieczulenia>
         <kontaktPoWizycie>
@@ -235,7 +194,7 @@
             <imie>string</imie>
             <nazwisko>string</nazwisko>
             <pesel>string</pesel>
-            <dataRejestracji>2015-08-04</dataRejestracji>
+            <dataRejestracji>2009-04-09</dataRejestracji>
           </pacjent>
           <lekarz id="10">
             <placa>
@@ -244,11 +203,10 @@
             </placa>
             <rolaPracownika>string</rolaPracownika>
           </lekarz>
-          <rodzajKontaktu>PLATFORMA_ONLINE</rodzajKontaktu>
+          <rodzajKontaktu>SMS</rodzajKontaktu>
           <wiadomosc>string</wiadomosc>
         </kontaktPoWizycie>
       </wizyta>
-      <data>2012-01-08+01:00</data>
       <listaLekow>
         <!--1 or more repetitions:-->
         <lek>
@@ -269,7 +227,7 @@
         </placa>
         <rolaPracownika>string</rolaPracownika>
       </lekarz>
-      <czas>2017-10-14T14:43:21</czas>
+      <czas>2011-06-03T21:00:00</czas>
     </stom:wolnyTermin>
   </stom:wolneTerminy>
 </stom:gabinetStomatologiczy>
