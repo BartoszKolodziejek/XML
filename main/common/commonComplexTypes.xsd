@@ -117,10 +117,7 @@
     <xs:complexType name="usluga">
         <xs:sequence>
             <xs:element type="simple:usluga" name="nazwa"/>
-            <xs:element type="tns:pacjent" name="pacjent"/>
-            <xs:element type="tns:lekarz" name="lekarz"/>
             <xs:element type="tns:wizyta" name="wizyta"/>
-            <xs:element type="xs:date" name="data"/>
             <xs:element name="listaLekow" type="tns:listaLekow"/>
         </xs:sequence>
     </xs:complexType>
