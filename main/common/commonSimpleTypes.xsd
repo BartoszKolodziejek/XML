@@ -89,6 +89,7 @@
             <xs:enumeration value="KONCOWKA_STANDARD"/>
             <xs:enumeration value="KONCOWKA_PNEUMATYCZNA"/>
             <xs:enumeration value="KONCOWKA_SZYBKO_OBROTOWA"/>
+            <xs:enumeration value="SZCZYPCE"/>
         </xs:restriction>
     </xs:simpleType>
 
