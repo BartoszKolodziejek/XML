@@ -95,8 +95,6 @@
 
     <xs:simpleType name="materialyStomatologiczne">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="ALGINATY"/>
-            <xs:enumeration value="AMALGAMATY"/>
             <xs:enumeration value="CWIEKI_GUTAPERKOWE"/>
             <xs:enumeration value="CWIEKI_PAPIEROWE"/>
             <xs:enumeration value="KALKI_ARTYKULACYJNE"/>
