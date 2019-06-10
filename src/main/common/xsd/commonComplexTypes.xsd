@@ -29,7 +29,6 @@
             <xs:element type="tns:lekarz" name="lekarz"/>
             <xs:element type="xs:dateTime" name="kiedy"/>
             <xs:element type="tns:usluga" name="opisUslugi"/>
-            <xs:element type="tns:kwotaWaluta" name="cenaUslugi"/>
             <xs:element type="simple:rodzajPlatnosci" name="rodzajPlatnosci"/>
             <xs:element type="simple:sprzetDiagnostyczny" name="zuzytySprzetDiagnostyczny" maxOccurs="unbounded" minOccurs="0"/>
             <xs:element type="simple:materialyStomatologiczne" name="zuzyteMaterialyStomatologiczne" maxOccurs="unbounded" minOccurs="0"/>

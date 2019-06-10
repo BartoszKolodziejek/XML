@@ -86,11 +86,11 @@
       <kiedy>2009-08-10T19:27:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>PLOMBOWANIE</nazwa>
+        <cenaUslugi>
+          <kwota>100</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>100.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
       <!--1 or more repetitions:-->
       <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
@@ -123,11 +123,11 @@
       <kiedy>2009-08-19T19:27:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>USUWANIE</nazwa>
+        <cenaUslugi>
+          <kwota>100</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>120.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>KARTA</rodzajPlatnosci>
       <!--1 or more repetitions:-->
       <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
@@ -161,11 +161,11 @@
       <kiedy>2016-08-19T17:27:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>WYBIELANIE</nazwa>
+        <cenaUslugi>
+          <kwota>300</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>400.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
       <!--1 or more repetitions:-->
       <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
@@ -194,11 +194,11 @@
       <kiedy>2018-01-19T14:00:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>LECZENIEKANALOWE</nazwa>
+        <cenaUslugi>
+          <kwota>200</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>200.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
       <!--1 or more repetitions:-->
       <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
@@ -225,11 +225,11 @@
       <kiedy>2012-01-19T21:10:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>PRZEGLAD</nazwa>
+        <cenaUslugi>
+          <kwota>50</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>50.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
       <!--1 or more repetitions:-->
       <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
@@ -254,11 +254,11 @@
       <kiedy>2018-08-03T14:00:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>PRZEGLAD</nazwa>
+        <cenaUslugi>
+          <kwota>50</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>50.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
       <!--1 or more repetitions:-->
       <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
@@ -283,11 +283,11 @@
       <kiedy>2018-08-11T07:11:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>RENTGEN</nazwa>
+        <cenaUslugi>
+          <kwota>70</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>70.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>KARTA</rodzajPlatnosci>
       <kontaktPoWizycie>
         <rodzajKontaktu>EMAIL</rodzajKontaktu>
@@ -314,11 +314,11 @@
       <kiedy>2016-03-10T10:00:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>LAKIEROWANIE</nazwa>
+        <cenaUslugi>
+          <kwota>220</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>250.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
       <!--1 or more repetitions:-->
       <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
@@ -346,11 +346,11 @@
       <kiedy>2019-05-11T11:55:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>USUWANIE</nazwa>
+        <cenaUslugi>
+          <kwota>100</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>120.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
       <!--1 or more repetitions:-->
       <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
@@ -380,11 +380,11 @@
       <kiedy>2019-06-01T19:27:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>USUWANIE</nazwa>
+        <cenaUslugi>
+          <kwota>100</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>120.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
       <!--1 or more repetitions:-->
       <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
@@ -414,11 +414,11 @@
       <kiedy>2006-04-11T10:00:00+02:00</kiedy>
       <opisUslugi>
         <nazwa>PLOMBOWANIE</nazwa>
+        <cenaUslugi>
+          <kwota>100</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>100.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
       <!--1 or more repetitions:-->
       <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
@@ -450,11 +450,11 @@
       <kiedy>2003-12-11T11:45:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>PRZEGLAD</nazwa>
+        <cenaUslugi>
+          <kwota>50</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>50.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
       <!--1 or more repetitions:-->
       <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
@@ -479,11 +479,11 @@
       <kiedy>2016-10-12T22:00:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>ODBUDOWA</nazwa>
+        <cenaUslugi>
+          <kwota>250</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>500.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
       <!--1 or more repetitions:-->
       <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
@@ -519,11 +519,11 @@
       <kiedy>2017-08-19T19:27:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>PRZEGLAD</nazwa>
+        <cenaUslugi>
+          <kwota>50</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>50.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
       <!--1 or more repetitions:-->
       <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
@@ -548,11 +548,11 @@
       <kiedy>2014-02-11T11:12:12+02:00</kiedy>
       <opisUslugi>
         <nazwa>WYBIELANIE</nazwa>
+        <cenaUslugi>
+          <kwota>300</kwota>
+          <waluta>PLN</waluta>
+        </cenaUslugi>
       </opisUslugi>
-      <cenaUslugi>
-        <kwota>400.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
       <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
       <!--1 or more repetitions:-->
       <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
