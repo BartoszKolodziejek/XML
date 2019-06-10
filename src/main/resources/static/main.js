@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header\">\r\n  <img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJgI924yn5nQ7lpaxVqeix2UsCBwa-t-7UILjXjp_1cT6XkRVcTw\"/>\r\n</div>\r\n<div class=\"nav\">\r\n  <ul class=\"nav-bar\">\r\n    <li id=\"pacjenci\" (click)=\"setContext('pacjenci')\">pacjenci</li>\r\n    <li id=\"pracownicy\">pracownicy</li>\r\n    <li id=\"recepty\">recepty</li>\r\n    <li id=\"wizyty\" (click)=\"setContext('wizyty')\">wizyty</li>\r\n    <li id=\"uslugi\">uslugi</li>\r\n    <li id=\"wolneTerminy\">wolne Terminy</li>\r\n  </ul>\r\n</div>\r\n<div>\r\n  <table id=\"table\">\r\n    <thead id=\"header\">\r\n    </thead>\r\n    <tbody id=\"body\">\r\n    </tbody>\r\n  </table>\r\n</div>\r\n"
+module.exports = "<div class=\"header\">\r\n  <img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJgI924yn5nQ7lpaxVqeix2UsCBwa-t-7UILjXjp_1cT6XkRVcTw\"/>\r\n</div>\r\n<div class=\"nav\">\r\n  <ul class=\"nav-bar\">\r\n    <li id=\"pacjenci\" (click)=\"setContext('pacjenci')\">pacjenci</li>\r\n    <li id=\"pracownicy\">pracownicy</li>\r\n    <li id=\"recepty\" (click)=\"setContext('recepty')\">recepty</li>\r\n    <li id=\"wizyty\" (click)=\"setContext('wizyty')\">wizyty</li>\r\n    <li id=\"uslugi\">uslugi</li>\r\n    <li id=\"wolneTerminy\">wolne Terminy</li>\r\n  </ul>\r\n</div>\r\n<div>\r\n  <table id=\"table\">\r\n    <thead id=\"header\">\r\n    </thead>\r\n    <tbody id=\"body\">\r\n    </tbody>\r\n  </table>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -92,7 +92,7 @@ var AppComponent = /** @class */ (function () {
                 '<th scope="col">imie</th>\n' +
                 '<th scope="col">nazwisko</th>\n' +
                 '<th scope="col">pesel</th>\n' +
-                '<th scope="col">dataDupa rejestracji</th>';
+                '<th scope="col">data rejestracji</th>';
         this.getAndTranformXml('patientsList');
     };
     AppComponent.prototype.loadWizyty = function () {
@@ -105,6 +105,14 @@ var AppComponent = /** @class */ (function () {
                 '<th scope="col">data</th>';
         this.getAndTranformXml('visitsList');
     };
+    AppComponent.prototype.loadRecepty = function () {
+        this.document.getElementById('table').innerHTML = '<thead id="header"></thead>';
+        document.getElementById('header').innerHTML =
+            '<th scope="col">pacjent</th>\n' +
+                '<th scope="col">lekarz</th>\n' +
+                '<th scope="col">leki</th>\n';
+        this.getAndTranformXml('receiptList');
+    };
     AppComponent.prototype.setContext = function (context) {
         switch (context) {
             case 'pacjenci':
@@ -112,6 +120,9 @@ var AppComponent = /** @class */ (function () {
                 break;
             case 'wizyty':
                 this.loadWizyty();
+                break;
+            case 'recepty':
+                this.loadRecepty();
                 break;
         }
     };
