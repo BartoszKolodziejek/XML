@@ -86,14 +86,6 @@
       <kiedy>2009-08-10T19:27:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>PLOMBOWANIE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>IBUPROM</nazwa>
-            <producent>USPHARMACIA</producent>
-            <procentRefundacji>20</procentRefundacji>
-          </lek>
-        </listaLekow>
       </opisUslugi>
       <cenaUslugi>
         <kwota>100.00</kwota>
@@ -131,14 +123,6 @@
       <kiedy>2009-08-19T19:27:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>USUWANIE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>IBUPROM</nazwa>
-            <producent>USPHARMACIA</producent>
-            <procentRefundacji>20</procentRefundacji>
-          </lek>
-        </listaLekow>
       </opisUslugi>
       <cenaUslugi>
         <kwota>120.00</kwota>
@@ -177,14 +161,6 @@
       <kiedy>2016-08-19T17:27:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>WYBIELANIE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>IWHITE</nazwa>
-            <producent>SIROWA</producent>
-            <procentRefundacji>0</procentRefundacji>
-          </lek>
-        </listaLekow>
       </opisUslugi>
       <cenaUslugi>
         <kwota>400.00</kwota>
@@ -218,14 +194,6 @@
       <kiedy>2018-01-19T14:00:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>LECZENIEKANALOWE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>AUGMENTIN</nazwa>
-            <producent>GSKPL</producent>
-            <procentRefundacji>50</procentRefundacji>
-          </lek>
-        </listaLekow>
       </opisUslugi>
       <cenaUslugi>
         <kwota>200.00</kwota>
@@ -378,14 +346,6 @@
       <kiedy>2019-05-11T11:55:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>USUWANIE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>AUGMENTIN</nazwa>
-            <producent>GSKPL</producent>
-            <procentRefundacji>50</procentRefundacji>
-          </lek>
-        </listaLekow>
       </opisUslugi>
       <cenaUslugi>
         <kwota>120.00</kwota>
@@ -420,14 +380,6 @@
       <kiedy>2019-06-01T19:27:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>USUWANIE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>AUGMENTIN</nazwa>
-            <producent>GSKPL</producent>
-            <procentRefundacji>50</procentRefundacji>
-          </lek>
-        </listaLekow>
       </opisUslugi>
       <cenaUslugi>
         <kwota>120.00</kwota>
@@ -462,14 +414,6 @@
       <kiedy>2006-04-11T10:00:00+02:00</kiedy>
       <opisUslugi>
         <nazwa>PLOMBOWANIE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>IBUPROM</nazwa>
-            <producent>USPHARMACIA</producent>
-            <procentRefundacji>20</procentRefundacji>
-          </lek>
-        </listaLekow>
       </opisUslugi>
       <cenaUslugi>
         <kwota>100.00</kwota>
@@ -535,19 +479,6 @@
       <kiedy>2016-10-12T22:00:14+02:00</kiedy>
       <opisUslugi>
         <nazwa>ODBUDOWA</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>METRONIDAZOL</nazwa>
-            <producent>USPHARMACIA</producent>
-            <procentRefundacji>40</procentRefundacji>
-          </lek>
-		  <lek>
-            <nazwa>DENTOSEPT</nazwa>
-            <producent>PHYTOPHARM</producent>
-            <procentRefundacji>0</procentRefundacji>
-          </lek>
-        </listaLekow>
       </opisUslugi>
       <cenaUslugi>
         <kwota>500.00</kwota>
