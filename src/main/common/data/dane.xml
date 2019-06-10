@@ -606,19 +606,6 @@
       <!--1 or more repetitions:-->
       <znieczulenia>NASIEKOWE</znieczulenia>
       <kontaktPoWizycie>
-        <pacjent id="1">
-          <imie>Jan</imie>
-          <nazwisko>Kowalski</nazwisko>
-          <pesel>69072011631</pesel>
-          <dataRejestracji>2008-09-29</dataRejestracji>
-        </pacjent>
-        <lekarz id="1">
-          <placa>
-            <kwota>4000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
         <rodzajKontaktu>EMAIL</rodzajKontaktu>
         <wiadomosc>Mozliwosc zgloszenia reklamacji?</wiadomosc>
       </kontaktPoWizycie>
@@ -679,19 +666,6 @@
       <!--1 or more repetitions:-->
       <znieczulenia>PRZEWODOWE</znieczulenia>
       <kontaktPoWizycie>
-        <pacjent id="1">
-          <imie>Jan</imie>
-          <nazwisko>Kowalski</nazwisko>
-          <pesel>69072011631</pesel>
-          <dataRejestracji>2008-09-29</dataRejestracji>
-        </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
         <rodzajKontaktu>EMAIL</rodzajKontaktu>
         <wiadomosc>Nadmierny ból po zabiegu. Możliwe działania?</wiadomosc>
       </kontaktPoWizycie>
