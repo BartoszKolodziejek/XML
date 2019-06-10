@@ -39,7 +39,7 @@ export class AppComponent {
       '<th scope="col">imie</th>\n' +
       '<th scope="col">nazwisko</th>\n' +
       '<th scope="col">pesel</th>\n' +
-      '<th scope="col">dataDupa rejestracji</th>';
+      '<th scope="col">data rejestracji</th>';
     this.getAndTranformXml('patientsList');
   }
 
@@ -54,6 +54,15 @@ export class AppComponent {
     this.getAndTranformXml('visitsList');
   }
 
+  loadRecepty() {
+    this.document.getElementById('table').innerHTML = '<thead id="header"></thead>';
+    document.getElementById('header').innerHTML =
+      '<th scope="col">pacjent</th>\n' +
+      '<th scope="col">lekarz</th>\n' +
+      '<th scope="col">leki</th>\n';
+    this.getAndTranformXml('receiptList');
+  }
+
   setContext(context: string) {
     switch (context) {
       case 'pacjenci':
@@ -61,6 +70,9 @@ export class AppComponent {
         break;
       case 'wizyty':
         this.loadWizyty();
+        break;
+      case 'recepty':
+        this.loadRecepty();
         break;
     }
   }

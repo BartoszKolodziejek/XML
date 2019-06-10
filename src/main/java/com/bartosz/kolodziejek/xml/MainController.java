@@ -21,11 +21,16 @@ public class MainController {
 
     @RequestMapping(value = "/patientsList", method = RequestMethod.GET)
     public String patientsTransform(){
-        return "transform/patientsList.xsl";
+        return "transform/patients.xsl";
     }
 
     @RequestMapping(value = "/visitsList", method = RequestMethod.GET)
     public String visitsTransform(){
-        return "transform/visits.xsl";
+        return "transform/visit.xsl";
+    }
+
+    @RequestMapping(value = "/receiptList", method = RequestMethod.GET)
+    public String receiptsTransform(){
+        return "transform/receipts.xsl";
     }
 }
