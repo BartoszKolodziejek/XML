@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/common/data/dane.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/common/data/dane.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/common/xsd/commonComplexTypes.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/common/xsd/commonComplexTypes.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/common/xsd/complexTypes.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/common/xsd/complexTypes.xsd" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,14 +16,14 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6104918">
+    <splitter split-orientation="horizontal" split-proportion="0.48786885">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/common/data/dane.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3742">
-                  <caret line="1137" column="23" lean-forward="true" selection-start-line="1137" selection-start-column="23" selection-end-line="1137" selection-end-column="23" />
+                <state relative-caret-position="606">
+                  <caret line="1209" column="17" lean-forward="true" selection-start-line="1209" selection-start-column="17" selection-end-line="1209" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -32,15 +31,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/common/xsd/commonSimpleTypes.xsd">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-670" />
+                <state relative-caret-position="391">
+                  <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+                </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/common/xsd/complexTypes.xsd">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="248">
-                  <caret line="75" column="69" lean-forward="true" selection-start-line="75" selection-start-column="69" selection-end-line="75" selection-end-column="69" />
+                <state relative-caret-position="246">
+                  <caret line="73" column="40" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -61,8 +62,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/common/xsd/commonComplexTypes.xsd">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+                <state relative-caret-position="116">
+                  <caret line="77" column="37" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="37" />
                 </state>
               </provider>
             </entry>
@@ -78,6 +79,7 @@
       <find>kontakt</find>
       <find>konta</find>
       <find>usluga</find>
+      <find>kwotaWaluta</find>
     </findStrings>
     <replaceStrings>
       <replace>/wizyta</replace>
@@ -100,8 +102,8 @@
         <option value="$PROJECT_DIR$/main/common/commonComplexTypes.xsd" />
         <option value="$USER_HOME$/Downloads/ObjectFactory.java" />
         <option value="$PROJECT_DIR$/src/main/common/xsd/commonSimpleTypes.xsd" />
-        <option value="$PROJECT_DIR$/src/main/common/xsd/commonComplexTypes.xsd" />
         <option value="$PROJECT_DIR$/src/main/common/xsd/complexTypes.xsd" />
+        <option value="$PROJECT_DIR$/src/main/common/xsd/commonComplexTypes.xsd" />
         <option value="$PROJECT_DIR$/src/main/common/data/dane.xml" />
       </list>
     </option>
@@ -308,7 +310,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560197372172</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="dane - recepty">
+      <created>1560198101463</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1560198101463</updated>
+    </task>
+    <task id="LOCAL-00015" summary="dane - recepty">
+      <created>1560198168813</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1560198168813</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -420,27 +436,29 @@
     <entry file="file://$PROJECT_DIR$/src/main/common/xslt/patientsList.xsl" />
     <entry file="file://$PROJECT_DIR$/src/main/common/xsd/commonSimpleTypes.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-670" />
+        <state relative-caret-position="391">
+          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/common/xsd/commonComplexTypes.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+        <state relative-caret-position="116">
+          <caret line="77" column="37" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/common/xsd/complexTypes.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="75" column="69" lean-forward="true" selection-start-line="75" selection-start-column="69" selection-end-line="75" selection-end-column="69" />
+        <state relative-caret-position="246">
+          <caret line="73" column="40" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/common/data/dane.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3742">
-          <caret line="1137" column="23" lean-forward="true" selection-start-line="1137" selection-start-column="23" selection-end-line="1137" selection-end-column="23" />
+        <state relative-caret-position="606">
+          <caret line="1209" column="17" lean-forward="true" selection-start-line="1209" selection-start-column="17" selection-end-line="1209" selection-end-column="17" />
         </state>
       </provider>
     </entry>

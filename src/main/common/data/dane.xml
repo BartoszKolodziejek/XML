@@ -1153,67 +1153,66 @@
   <stom:listaUslug>
     <stom:usluga>
       <nazwa>USUWANIE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>AUGMENTIN</nazwa>
-            <producent>GSKPL</producent>
-            <procentRefundacji>50</procentRefundacji>
-          </lek>
-        </listaLekow>
+      <cenaUslugi>
+        <kwota>100</kwota>
+        <waluta>PLN</waluta>
+      </cenaUslugi>
     </stom:usluga>
     <stom:usluga>
       <nazwa>PLOMBOWANIE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>IBUPROM</nazwa>
-            <producent>USPHARMACIA</producent>
-            <procentRefundacji>20</procentRefundacji>
-          </lek>
-        </listaLekow>
+      <cenaUslugi>
+        <kwota>100</kwota>
+        <waluta>PLN</waluta>
+      </cenaUslugi>
     </stom:usluga>
     <stom:usluga>
       <nazwa>LECZENIEKANALOWE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>AUGMENTIN</nazwa>
-            <producent>GSKPL</producent>
-            <procentRefundacji>50</procentRefundacji>
-          </lek>
-        </listaLekow>
+      <cenaUslugi>
+        <kwota>200</kwota>
+        <waluta>PLN</waluta>
+      </cenaUslugi>
     </stom:usluga>
 	<stom:usluga>
       <nazwa>WYBIELANIE</nazwa>
+      <cenaUslugi>
+        <kwota>300</kwota>
+        <waluta>PLN</waluta>
+      </cenaUslugi>
     </stom:usluga>
 	<stom:usluga>
       <nazwa>PRZEGLAD</nazwa>
+      <cenaUslugi>
+        <kwota>50</kwota>
+        <waluta>PLN</waluta>
+      </cenaUslugi>
     </stom:usluga>
 	<stom:usluga>
       <nazwa>RENTGEN</nazwa>
+      <cenaUslugi>
+        <kwota>70</kwota>
+        <waluta>PLN</waluta>
+      </cenaUslugi>
     </stom:usluga>
 	<stom:usluga>
       <nazwa>LAKOWANIE</nazwa>
+      <cenaUslugi>
+        <kwota>150</kwota>
+        <waluta>PLN</waluta>
+      </cenaUslugi>
     </stom:usluga>
 	<stom:usluga>
       <nazwa>ODBUDOWA</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>METRONIDAZOL</nazwa>
-            <producent>USPHARMACIA</producent>
-            <procentRefundacji>40</procentRefundacji>
-          </lek>
-		  <lek>
-            <nazwa>DENTOSEPT</nazwa>
-            <producent>PHYTOPHARM</producent>
-            <procentRefundacji>0</procentRefundacji>
-          </lek>
-        </listaLekow>
+      <cenaUslugi>
+        <kwota>250</kwota>
+        <waluta>PLN</waluta>
+      </cenaUslugi>
     </stom:usluga>
 	<stom:usluga>
       <nazwa>LAKIEROWANIE</nazwa>
+      <cenaUslugi>
+        <kwota>220</kwota>
+        <waluta>PLN</waluta>
+      </cenaUslugi>
     </stom:usluga>
   </stom:listaUslug>
 </stom:gabinetStomatologiczy>

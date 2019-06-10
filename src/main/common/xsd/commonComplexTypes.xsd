@@ -108,7 +108,7 @@
     <xs:complexType name="usluga">
         <xs:sequence>
             <xs:element type="simple:usluga" name="nazwa"/>
-            <xs:element name="listaLekow" type="tns:listaLekow" minOccurs="0"/>
+            <xs:element type="tns:kwotaWaluta" name="cenaUslugi"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
