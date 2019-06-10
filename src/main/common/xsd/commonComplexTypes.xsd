@@ -75,14 +75,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="termin">
-        <xs:sequence>
-            <xs:element type="tns:pacjent" name="pacjent"/>
-            <xs:element type="tns:lekarz" name="lekarz"/>
-            <xs:element type="xs:dateTime" name="czas"/>
-        </xs:sequence>
-    </xs:complexType>
-
     <xs:complexType name="wolnyTermin">
         <xs:sequence>
             <xs:element type="tns:lekarz" name="lekarz"/>

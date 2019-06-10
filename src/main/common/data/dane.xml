@@ -932,486 +932,222 @@
   </stom:listaRecept>
   <!--Optional:-->
   <stom:terminarzWizyt>
-    <stom:termin>
-      <pacjent id="1">
-        <imie>Jan</imie>
-        <nazwisko>Kowalski</nazwisko>
-        <pesel>69072011631</pesel>
-        <dataRejestracji>2008-09-29</dataRejestracji>
-      </pacjent>
+    <stom:wolnyTermin>
       <lekarz id="1">
         <placa>
-          <kwota>4000.00</kwota>
+          <kwota>4500</kwota>
           <waluta>PLN</waluta>
         </placa>
+        <imie>Gregory</imie>
+        <nazwisko>House</nazwisko>
         <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <czas>2009-08-10T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="1">
-        <imie>Jan</imie>
-        <nazwisko>Kowalski</nazwisko>
-        <pesel>69072011631</pesel>
-        <dataRejestracji>2008-09-29</dataRejestracji>
-      </pacjent>
+      <czas>2019-07-11T11:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
+      <lekarz id="1">
+        <placa>
+          <kwota>4500</kwota>
+          <waluta>PLN</waluta>
+        </placa>
+        <imie>Gregory</imie>
+        <nazwisko>House</nazwisko>
+        <rolaPracownika>LEKARZ</rolaPracownika>
+      </lekarz>
+      <czas>2019-07-12T09:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
+      <lekarz id="1">
+        <placa>
+          <kwota>4500</kwota>
+          <waluta>PLN</waluta>
+        </placa>
+        <imie>Gregory</imie>
+        <nazwisko>House</nazwisko>
+        <rolaPracownika>LEKARZ</rolaPracownika>
+      </lekarz>
+      <czas>2019-07-13T17:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
+      <lekarz id="1">
+        <placa>
+          <kwota>4500</kwota>
+          <waluta>PLN</waluta>
+        </placa>
+        <imie>Gregory</imie>
+        <nazwisko>House</nazwisko>
+        <rolaPracownika>LEKARZ</rolaPracownika>
+      </lekarz>
+      <czas>2019-07-11T13:00:10+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
       <lekarz id="2">
         <placa>
-          <kwota>5000.00</kwota>
+          <kwota>3500</kwota>
           <waluta>PLN</waluta>
         </placa>
+        <imie>James</imie>
+        <nazwisko>Wilson</nazwisko>
         <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <czas>2009-08-19T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="2">
-        <imie>Tomasz</imie>
-        <nazwisko>Adamek</nazwisko>
-        <pesel>51081248492</pesel>
-        <dataRejestracji>2015-10-19</dataRejestracji>
-      </pacjent>
+      <czas>2019-07-11T12:00:00+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
       <lekarz id="2">
         <placa>
-          <kwota>5000.00</kwota>
+          <kwota>3500</kwota>
           <waluta>PLN</waluta>
         </placa>
+        <imie>James</imie>
+        <nazwisko>Wilson</nazwisko>
         <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <czas>2016-08-19T17:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="2">
-        <imie>Tomasz</imie>
-        <nazwisko>Adamek</nazwisko>
-        <pesel>51081248492</pesel>
-        <dataRejestracji>2015-10-19</dataRejestracji>
-      </pacjent>
+      <czas>2019-07-12T12:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
       <lekarz id="2">
         <placa>
-          <kwota>5000.00</kwota>
+          <kwota>3500</kwota>
           <waluta>PLN</waluta>
         </placa>
+        <imie>James</imie>
+        <nazwisko>Wilson</nazwisko>
         <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <czas>2018-01-19T14:00:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="3">
-        <imie>Robert</imie>
-        <nazwisko>Lewandowski</nazwisko>
-        <pesel>71050392531</pesel>
-        <dataRejestracji>2007-12-10</dataRejestracji>
-      </pacjent>
+      <czas>2019-07-18T11:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
+      <lekarz id="2">
+        <placa>
+          <kwota>3500</kwota>
+          <waluta>PLN</waluta>
+        </placa>
+        <imie>James</imie>
+        <nazwisko>Wilson</nazwisko>
+        <rolaPracownika>LEKARZ</rolaPracownika>
+      </lekarz>
+      <czas>2019-07-18T08:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
       <lekarz id="3">
         <placa>
-          <kwota>4500.00</kwota>
+          <kwota>4000</kwota>
           <waluta>PLN</waluta>
         </placa>
+        <imie>Allison</imie>
+        <nazwisko>Cameron</nazwisko>
         <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <czas>2012-01-19T21:10:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="3">
-        <imie>Robert</imie>
-        <nazwisko>Lewandowski</nazwisko>
-        <pesel>71050392531</pesel>
-        <dataRejestracji>2007-12-10</dataRejestracji>
-      </pacjent>
+      <czas>2019-07-05T10:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
       <lekarz id="3">
         <placa>
-          <kwota>4500.00</kwota>
+          <kwota>4000</kwota>
           <waluta>PLN</waluta>
         </placa>
+        <imie>Allison</imie>
+        <nazwisko>Cameron</nazwisko>
         <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <czas>2018-08-03T14:00:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="4">
-        <imie>Krystian</imie>
-        <nazwisko>Dabrowski</nazwisko>
-        <pesel>51121932772</pesel>
-        <dataRejestracji>2018-02-05</dataRejestracji>
-      </pacjent>
-        <lekarz id="4">
-          <placa>
-            <kwota>5500.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2018-08-11T07:11:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="5">
-        <imie>Jakub</imie>
-        <nazwisko>Blaszczykowski</nazwisko>
-        <pesel>69090918499</pesel>
-        <dataRejestracji>2011-03-01</dataRejestracji>
-      </pacjent>
-        <lekarz id="4">
-          <placa>
-            <kwota>5500.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2016-03-10T10:00:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="6">
-        <imie>Janina</imie>
-        <nazwisko>Kowalska</nazwisko>
-        <pesel>52111116169</pesel>
-        <dataRejestracji>2018-09-11</dataRejestracji>
-      </pacjent>
-      <lekarz id="1">
+      <czas>2019-07-11T18:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
+      <lekarz id="3">
         <placa>
-          <kwota>4000.00</kwota>
+          <kwota>4000</kwota>
           <waluta>PLN</waluta>
         </placa>
+        <imie>Allison</imie>
+        <nazwisko>Cameron</nazwisko>
         <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <czas>2019-05-11T11:55:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="6">
-        <imie>Janina</imie>
-        <nazwisko>Kowalska</nazwisko>
-        <pesel>52111116169</pesel>
-        <dataRejestracji>2018-09-11</dataRejestracji>
-      </pacjent>
-      <lekarz id="1">
+      <czas>2019-07-02T11:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
+      <lekarz id="3">
         <placa>
-          <kwota>4000.00</kwota>
+          <kwota>4000</kwota>
           <waluta>PLN</waluta>
         </placa>
+        <imie>Allison</imie>
+        <nazwisko>Cameron</nazwisko>
         <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <czas>2019-06-01T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="7">
-        <imie>Otylia</imie>
-        <nazwisko>Jedrzejczak</nazwisko>
-        <pesel>85120495545</pesel>
-        <dataRejestracji>2001-04-04</dataRejestracji>
-      </pacjent>
-        <lekarz id="1">
-          <placa>
-            <kwota>4000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2006-04-11T10:00:00+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="8">
-        <imie>Agnieszka</imie>
-        <nazwisko>Radwanska</nazwisko>
-        <pesel>00311096729</pesel>
-        <dataRejestracji>2002-08-02</dataRejestracji>
-      </pacjent>
-        <lekarz id="1">
-          <placa>
-            <kwota>4000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2003-12-11T11:45:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="9">
-        <imie>Olga</imie>
-        <nazwisko>Kowalewska</nazwisko>
-        <pesel>98031339442</pesel>
-        <dataRejestracji>2014-05-01</dataRejestracji>
-      </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2016-10-12T22:00:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="10">
-        <imie>Kamila</imie>
-        <nazwisko>Porczyk</nazwisko>
-        <pesel>48042366863</pesel>
-        <dataRejestracji>2012-12-12</dataRejestracji>
-      </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2014-02-11T11:12:12+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="9">
-        <imie>Olga</imie>
-        <nazwisko>Kowalewska</nazwisko>
-        <pesel>98031339442</pesel>
-        <dataRejestracji>2014-05-01</dataRejestracji>
-      </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2017-08-19T19:27:14+02:00</czas>
-    </stom:termin>
-		<stom:termin>
-      <pacjent id="1">
-        <imie>Jan</imie>
-        <nazwisko>Kowalski</nazwisko>
-        <pesel>69072011631</pesel>
-        <dataRejestracji>2008-09-29</dataRejestracji>
-      </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-08-19T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="1">
-        <imie>Jan</imie>
-        <nazwisko>Kowalski</nazwisko>
-        <pesel>69072011631</pesel>
-        <dataRejestracji>2008-09-29</dataRejestracji>
-      </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-08-25T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="1">
-        <imie>Jan</imie>
-        <nazwisko>Kowalski</nazwisko>
-        <pesel>69072011631</pesel>
-        <dataRejestracji>2008-09-29</dataRejestracji>
-      </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-08-30T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="2">
-        <imie>Tomasz</imie>
-        <nazwisko>Adamek</nazwisko>
-        <pesel>51081248492</pesel>
-        <dataRejestracji>2015-10-19</dataRejestracji>
-      </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-08-19T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="2">
-        <imie>Tomasz</imie>
-        <nazwisko>Adamek</nazwisko>
-        <pesel>51081248492</pesel>
-        <dataRejestracji>2015-10-19</dataRejestracji>
-      </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-08-25T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="3">
-        <imie>Robert</imie>
-        <nazwisko>Lewandowski</nazwisko>
-        <pesel>71050392531</pesel>
-        <dataRejestracji>2007-12-10</dataRejestracji>
-      </pacjent>
-        <lekarz id="3">
-          <placa>
-            <kwota>4500.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-07-11T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="3">
-        <imie>Robert</imie>
-        <nazwisko>Lewandowski</nazwisko>
-        <pesel>71050392531</pesel>
-        <dataRejestracji>2007-12-10</dataRejestracji>
-      </pacjent>
-        <lekarz id="3">
-          <placa>
-            <kwota>4500.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-07-30T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="4">
-        <imie>Krystian</imie>
-        <nazwisko>Dabrowski</nazwisko>
-        <pesel>51121932772</pesel>
-        <dataRejestracji>2018-02-05</dataRejestracji>
-      </pacjent>
-        <lekarz id="4">
-          <placa>
-            <kwota>5500.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-06-19T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="4">
-        <imie>Krystian</imie>
-        <nazwisko>Dabrowski</nazwisko>
-        <pesel>51121932772</pesel>
-        <dataRejestracji>2018-02-05</dataRejestracji>
-      </pacjent>
-        <lekarz id="4">
-          <placa>
-            <kwota>5500.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-07-25T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="5">
-        <imie>Jakub</imie>
-        <nazwisko>Blaszczykowski</nazwisko>
-        <pesel>69090918499</pesel>
-        <dataRejestracji>2011-03-01</dataRejestracji>
-      </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-06-13T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="5">
-        <imie>Jakub</imie>
-        <nazwisko>Blaszczykowski</nazwisko>
-        <pesel>69090918499</pesel>
-        <dataRejestracji>2011-03-01</dataRejestracji>
-      </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-09-30T19:27:14+02:00</czas>
-    </stom:termin>
-		<stom:termin>
-      <pacjent id="6">
-        <imie>Janina</imie>
-        <nazwisko>Kowalska</nazwisko>
-        <pesel>52111116169</pesel>
-        <dataRejestracji>2018-09-11</dataRejestracji>
-      </pacjent>
-        <lekarz id="4">
-          <placa>
-            <kwota>5500.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-06-29T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="7">
-        <imie>Otylia</imie>
-        <nazwisko>Jedrzejczak</nazwisko>
-        <pesel>85120495545</pesel>
-        <dataRejestracji>2001-04-04</dataRejestracji>
-      </pacjent>
-        <lekarz id="4">
-          <placa>
-            <kwota>5500.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-07-21T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="8">
-        <imie>Agnieszka</imie>
-        <nazwisko>Radwanska</nazwisko>
-        <pesel>00311096729</pesel>
-        <dataRejestracji>2002-08-02</dataRejestracji>
-      </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-06-18T19:27:14+02:00</czas>
-    </stom:termin>
-	<stom:termin>
-      <pacjent id="9">
-        <imie>Olga</imie>
-        <nazwisko>Kowalewska</nazwisko>
-        <pesel>98031339442</pesel>
-        <dataRejestracji>2014-05-01</dataRejestracji>
-      </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
-      <czas>2019-09-30T19:27:14+02:00</czas>
-    </stom:termin>
+      <czas>2019-07-02T12:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
+      <lekarz id="3">
+        <placa>
+          <kwota>4000</kwota>
+          <waluta>PLN</waluta>
+        </placa>
+        <imie>Allison</imie>
+        <nazwisko>Cameron</nazwisko>
+        <rolaPracownika>LEKARZ</rolaPracownika>
+      </lekarz>
+      <czas>2019-07-07T08:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
+      <lekarz id="4">
+        <placa>
+          <kwota>3800</kwota>
+          <waluta>PLN</waluta>
+        </placa>
+        <imie>Remy</imie>
+        <nazwisko>Hadley</nazwisko>
+        <rolaPracownika>LEKARZ</rolaPracownika>
+      </lekarz>
+      <czas>2019-07-07T09:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
+      <lekarz id="4">
+        <placa>
+          <kwota>3800</kwota>
+          <waluta>PLN</waluta>
+        </placa>
+        <imie>Remy</imie>
+        <nazwisko>Hadley</nazwisko>
+        <rolaPracownika>LEKARZ</rolaPracownika>
+      </lekarz>
+      <czas>2019-07-07T14:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
+      <lekarz id="4">
+        <placa>
+          <kwota>3800</kwota>
+          <waluta>PLN</waluta>
+        </placa>
+        <imie>Remy</imie>
+        <nazwisko>Hadley</nazwisko>
+        <rolaPracownika>LEKARZ</rolaPracownika>
+      </lekarz>
+      <czas>2019-07-07T16:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
+      <lekarz id="4">
+        <placa>
+          <kwota>3800</kwota>
+          <waluta>PLN</waluta>
+        </placa>
+        <imie>Remy</imie>
+        <nazwisko>Hadley</nazwisko>
+        <rolaPracownika>LEKARZ</rolaPracownika>
+      </lekarz>
+      <czas>2019-07-03T15:00:14+02:00</czas>
+    </stom:wolnyTermin>
+    <stom:wolnyTermin>
+      <lekarz id="4">
+        <placa>
+          <kwota>3800</kwota>
+          <waluta>PLN</waluta>
+        </placa>
+        <imie>Remy</imie>
+        <nazwisko>Hadley</nazwisko>
+        <rolaPracownika>LEKARZ</rolaPracownika>
+      </lekarz>
+      <czas>2019-07-03T07:00:14+02:00</czas>
+    </stom:wolnyTermin>
   </stom:terminarzWizyt>
   <!--Optional:-->
   <stom:listaUslug>
