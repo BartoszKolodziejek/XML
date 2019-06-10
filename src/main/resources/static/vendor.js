@@ -652,12 +652,12 @@ var localeEn = [
  */
 var LOCALE_DATA = {};
 /**
- * Register global data to be used internally by Angular. See the
- * ["I18n guide"](guide/i18n#i18n-pipes) to know how to import additional locale data.
+ * Register global dane to be used internally by Angular. See the
+ * ["I18n guide"](guide/i18n#i18n-pipes) to know how to import additional locale dane.
  *
  * @publicApi
  */
-// The signature registerLocaleData(data: any, extraData?: any) is deprecated since v5.1
+// The signature registerLocaleData(dane: any, extraData?: any) is deprecated since v5.1
 function registerLocaleData(data, localeId, extraData) {
     if (typeof localeId !== 'string') {
         extraData = localeId;
@@ -1293,7 +1293,7 @@ function getLocalePluralCase(locale) {
 }
 function checkFullData(data) {
     if (!data[19 /* ExtraData */]) {
-        throw new Error("Missing extra locale data for the locale \"" + data[0 /* LocaleId */] + "\". Use \"registerLocaleData\" to load new data. See the \"I18n guide\" on angular.io to know more.");
+        throw new Error("Missing extra locale dane for the locale \"" + data[0 /* LocaleId */] + "\". Use \"registerLocaleData\" to load new dane. See the \"I18n guide\" on angular.io to know more.");
     }
 }
 /**
@@ -1306,7 +1306,7 @@ function checkFullData(data) {
  *
  * A rule can specify a period as time range, or as a single time value.
  *
- * This functionality is only available when you have loaded the full locale data.
+ * This functionality is only available when you have loaded the full locale dane.
  * See the ["I18n guide"](guide/i18n#i18n-pipes).
  *
  * @param locale A locale code for the locale format rules to use.
@@ -1334,7 +1334,7 @@ function getLocaleExtraDayPeriodRules(locale) {
  * in different languages.
  * For example, for `en-US`, periods are morning, noon, afternoon, evening, and midnight.
  *
- * This functionality is only available when you have loaded the full locale data.
+ * This functionality is only available when you have loaded the full locale dane.
  * See the ["I18n guide"](guide/i18n#i18n-pipes).
  *
  * @param locale A locale code for the locale format rules to use.
@@ -1359,10 +1359,10 @@ function getLocaleExtraDayPeriods(locale, formStyle, width) {
 /**
  * Retrieves the first value that is defined in an array, going backwards from an index position.
  *
- * To avoid repeating the same data (as when the "format" and "standalone" forms are the same)
- * add the first value to the locale data arrays, and add other values only if they are different.
+ * To avoid repeating the same dane (as when the "format" and "standalone" forms are the same)
+ * add the first value to the locale dane arrays, and add other values only if they are different.
  *
- * @param data The data array to retrieve from.
+ * @param data The dane array to retrieve from.
  * @param index A 0-based index into the array to start from.
  * @returns The value immediately before the given index position.
  * @see [Internationalization (i18n) Guide](https://angular.io/guide/i18n)
@@ -1375,7 +1375,7 @@ function getLastDefinedValue(data, index) {
             return data[i];
         }
     }
-    throw new Error('Locale data API: locale data undefined');
+    throw new Error('Locale dane API: locale dane undefined');
 }
 /**
  * Extracts the hours and minutes from a string like "15:45"
@@ -1385,10 +1385,10 @@ function extractTime(time) {
     return { hours: +h, minutes: +m };
 }
 /**
- * Finds the locale data for a given locale.
+ * Finds the locale dane for a given locale.
  *
  * @param locale The locale code.
- * @returns The locale data.
+ * @returns The locale dane.
  * @see [Internationalization (i18n) Guide](https://angular.io/guide/i18n)
  *
  * @publicApi
@@ -1408,7 +1408,7 @@ function findLocaleData(locale) {
     if (parentLocale === 'en') {
         return localeEn;
     }
-    throw new Error("Missing locale data for the locale \"" + locale + "\".");
+    throw new Error("Missing locale dane for the locale \"" + locale + "\".");
 }
 /**
  * Retrieves the currency symbol for a given currency code.
@@ -2000,7 +2000,7 @@ function getDateFormatter(format) {
         case 'O':
         case 'OO':
         case 'OOO':
-        // Should be location, but fallback to format O instead because we don't have the data yet
+        // Should be location, but fallback to format O instead because we don't have the dane yet
         case 'z':
         case 'zz':
         case 'zzz':
@@ -2009,7 +2009,7 @@ function getDateFormatter(format) {
         // Timezone GMT long format (GMT+0430)
         case 'OOOO':
         case 'ZZZZ':
-        // Should be location, but fallback to format O instead because we don't have the data yet
+        // Should be location, but fallback to format O instead because we don't have the dane yet
         case 'zzzz':
             formatter = timeZoneGetter(ZoneWidth.Long);
             break;
@@ -2585,7 +2585,7 @@ var NgLocaleLocalization = /** @class */ (function (_super) {
 /**
  * Returns the plural case based on the locale
  *
- * @deprecated from v5 the plural case function is in locale data files common/locales/*.ts
+ * @deprecated from v5 the plural case function is in locale dane files common/locales/*.ts
  * @publicApi
  */
 function getPluralCase(locale, nLike) {
@@ -3402,9 +3402,9 @@ var NgForOfContext = /** @class */ (function () {
  * such as user input.
  * For more on animations, see [Transitions and Triggers](guide/transition-and-triggers).
  *
- * The identities of elements in the iterator can change while the data does not.
+ * The identities of elements in the iterator can change while the dane does not.
  * This can happen, for example, if the iterator is produced from an RPC to the server, and that
- * RPC is re-run. Even if the data hasn't changed, the second response produces objects with
+ * RPC is re-run. Even if the dane hasn't changed, the second response produces objects with
  * different identities, and Angular must tear down the entire DOM and rebuild it (as if all old
  * elements were deleted and all new elements inserted).
  *
@@ -3644,7 +3644,7 @@ function getTypeNameForDebugging(type) {
  * ### Storing a conditional result in a variable
  *
  * You might want to show a set of properties from the same object. If you are waiting
- * for asynchronous data, the object can be undefined.
+ * for asynchronous dane, the object can be undefined.
  * In this case, you can use `ngIf` and store the result of the condition in a local
  * variable as shown in the the following example.
  *
@@ -3654,17 +3654,17 @@ function getTypeNameForDebugging(type) {
  * The conditional statement stores the result of `userStream|async` in the local variable `user`.
  * You can then bind the local `user` repeatedly.
  *
- * The conditional displays the data only if `userStream` returns a value,
+ * The conditional displays the dane only if `userStream` returns a value,
  * so you don't need to use the
  * [safe-navigation-operator](guide/template-syntax#safe-navigation-operator) (`?.`)
  * to guard against null values when accessing properties.
- * You can display an alternative template while waiting for the data.
+ * You can display an alternative template while waiting for the dane.
  *
  * ### Shorthand syntax
  *
  * The shorthand syntax `*ngIf` expands into two separate template specifications
  * for the "then" and "else" clauses. For example, consider the following shorthand statement,
- * that is meant to show a loading page while waiting for data to be loaded.
+ * that is meant to show a loading page while waiting for dane to be loaded.
  *
  * ```
  * <div class="hero-list" *ngIf="heroes else loading">
@@ -5193,8 +5193,8 @@ var UpperCasePipe = /** @class */ (function () {
  *
  * Formats a date value according to locale rules.
  *
- * Only the `en-US` locale data comes with Angular. To localize dates
- * in another language, you must import the corresponding locale data.
+ * Only the `en-US` locale dane comes with Angular. To localize dates
+ * in another language, you must import the corresponding locale dane.
  * See the [I18n guide](guide/i18n#i18n-pipes) for more information.
  *
  * @see `formatDate()`
@@ -5230,7 +5230,7 @@ var UpperCasePipe = /** @class */ (function () {
  * You can construct a format string using symbols to specify the components
  * of a date-time value, as described in the following table.
  * Format details depend on the locale.
- * Fields marked with (*) are only available in the extra data set for the given locale.
+ * Fields marked with (*) are only available in the extra dane set for the given locale.
  *
  *  | Field type         | Format      | Description                                                   | Example Value                                              |
  *  |--------------------|-------------|---------------------------------------------------------------|------------------------------------------------------------|
@@ -11084,7 +11084,7 @@ function getTranslationDeclStmts(variable$$1, message, meta, params, transformFn
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-/** Name of the temporary to use during data binding */
+/** Name of the temporary to use during dane binding */
 var TEMPORARY_NAME = '_t';
 /** Name of the context parameter passed into a template function */
 var CONTEXT_NAME = 'ctx';
@@ -11597,7 +11597,7 @@ var DEFAULT_INTERPOLATION_CONFIG = new InterpolationConfig('{{', '}}');
  */
 // https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit
 var VERSION = 3;
-var JS_B64_PREFIX = '# sourceMappingURL=data:application/json;base64,';
+var JS_B64_PREFIX = '# sourceMappingURL=dane:application/json;base64,';
 var SourceMapGenerator = /** @class */ (function () {
     function SourceMapGenerator(file) {
         if (file === void 0) { file = null; }
@@ -15445,7 +15445,7 @@ var StylingBuilder = /** @class */ (function () {
     /**
      * Builds an instruction with all the expressions and parameters for `elementStylingMap`.
      *
-     * The instruction data will contain all expressions for `elementStylingMap` to function
+     * The instruction dane will contain all expressions for `elementStylingMap` to function
      * which include the `[style]` and `[class]` expression params (if they exist) as well as
      * the sanitizer and directive reference expression.
      */
@@ -18050,7 +18050,7 @@ function SECURITY_SCHEMA() {
             'link|href',
             'media|src',
             'object|codebase',
-            'object|data',
+            'object|dane',
             'script|src',
         ]);
     }
@@ -18205,7 +18205,7 @@ var SCHEMA = [
     'meter^[HTMLElement]|#high,#low,#max,#min,#optimum,#value',
     'ins,del^[HTMLElement]|cite,dateTime',
     'ol^[HTMLElement]|!compact,!reversed,#start,type',
-    'object^[HTMLElement]|align,archive,border,code,codeBase,codeType,data,!declare,height,#hspace,name,standby,type,useMap,#vspace,width',
+    'object^[HTMLElement]|align,archive,border,code,codeBase,codeType,dane,!declare,height,#hspace,name,standby,type,useMap,#vspace,width',
     'optgroup^[HTMLElement]|!disabled,label',
     'option^[HTMLElement]|!defaultSelected,!disabled,label,!selected,text,value',
     'output^[HTMLElement]|defaultValue,%htmlFor,name,value',
@@ -18299,7 +18299,7 @@ var SCHEMA = [
     ':svg:title^:svg:|',
     ':svg:use^:svg:graphics|',
     ':svg:view^:svg:|#zoomAndPan',
-    'data^[HTMLElement]|value',
+    'dane^[HTMLElement]|value',
     'keygen^[HTMLElement]|!autofocus,challenge,!disabled,form,keytype,name',
     'menuitem^[HTMLElement]|type,label,icon,!disabled,!checked,radiogroup,!default',
     'summary^[HTMLElement]|',
@@ -20192,7 +20192,7 @@ var TemplateDefinitionBuilder = /** @class */ (function () {
         this.visitTextAttribute = invalid$1;
         this.visitBoundAttribute = invalid$1;
         this.visitBoundEvent = invalid$1;
-        // view queries can take up space in data and allocation happens earlier (in the "viewQuery"
+        // view queries can take up space in dane and allocation happens earlier (in the "viewQuery"
         // function)
         this._dataIndex = viewQueries.length;
         this._bindingScope = parentBindingScope.nestedScope(level);
@@ -21652,7 +21652,7 @@ function compileComponentFromMetadata(meta, constantPool, bindingParser) {
     return { expression: expression, type: type, statements: statements };
 }
 /**
- * A wrapper around `compileDirective` which depends on render2 global analysis data as its input
+ * A wrapper around `compileDirective` which depends on render2 global analysis dane as its input
  * instead of the `R3DirectiveMetadata`.
  *
  * `R3DirectiveMetadata` is computed from `CompileDirectiveMetadata` and other statically reflected
@@ -21668,7 +21668,7 @@ function compileDirectiveFromRender2(outputCtx, directive, reflector, bindingPar
     outputCtx.statements.push(new ClassStmt(name, null, [new ClassField(definitionField, INFERRED_TYPE, [StmtModifier.Static], res.expression)], [], new ClassMethod(null, [], []), []));
 }
 /**
- * A wrapper around `compileComponent` which depends on render2 global analysis data as its input
+ * A wrapper around `compileComponent` which depends on render2 global analysis dane as its input
  * instead of the `R3DirectiveMetadata`.
  *
  * `R3ComponentMetadata` is computed from `CompileDirectiveMetadata` and other statically reflected
@@ -29798,10 +29798,10 @@ var ToJsonSerializer = /** @class */ (function (_super) {
                 // We need to keep e.g. the ctor args, method names, method decorators
                 // so that the class can be extended in another compilation unit.
                 // We don't keep the class decorators as
-                // 1) they refer to data
+                // 1) they refer to dane
                 //   that should not cause a rebuild of downstream compilation units
                 //   (e.g. inline templates of @Component, or @NgModule.declarations)
-                // 2) their data is already captured in TypeSummaries, e.g. DirectiveSummary.
+                // 2) their dane is already captured in TypeSummaries, e.g. DirectiveSummary.
                 var clone_1 = {};
                 Object.keys(metadata_1).forEach(function (propName) {
                     if (propName !== 'decorators') {
@@ -29840,7 +29840,7 @@ var ToJsonSerializer = /** @class */ (function (_super) {
         if (!unprocessedSummary.type && summary.type) {
             unprocessedSummary.type = summary.type;
             // Note: We don't add the summaries of all referenced symbols as for the ResolvedSymbols,
-            // as the type summaries already contain the transitive data that they require
+            // as the type summaries already contain the transitive dane that they require
             // (in a minimal way).
             processedSummary.type = this.processValue(summary.type, 0 /* None */);
             // except for reexported directives / pipes, so we need to store
@@ -32499,7 +32499,7 @@ var CATCH_STACK_VAR$2 = 'stack';
  * ready for linking into an application.
  *
  * @security  When compiling templates at runtime, you must ensure that the entire template comes
- * from a trusted source. Attacker-controlled data introduced by a template could expose your
+ * from a trusted source. Attacker-controlled dane introduced by a template could expose your
  * application to XSS risks.  For more detail, see the [Security Guide](http://g.co/ng/security).
  */
 var JitCompiler = /** @class */ (function () {
@@ -32790,7 +32790,7 @@ function createOutputContext() {
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * Provides access to reflection data about symbols that the compiler needs.
+ * Provides access to reflection dane about symbols that the compiler needs.
  */
 var CompileReflector = /** @class */ (function () {
     function CompileReflector() {
@@ -32867,7 +32867,7 @@ function getUrlScheme(url) {
  * @param opt_port The port number.
  * @param opt_path The path, already URI-encoded.  If it is not
  *     empty, it must begin with a slash.
- * @param opt_queryData The URI-encoded query data.
+ * @param opt_queryData The URI-encoded query dane.
  * @param opt_fragment The URI-encoded fragment identifier.
  * @return The fully combined URI.
  */
@@ -35231,7 +35231,7 @@ function assertHasParent(tNode) {
     assertDefined(tNode.parent, 'previousOrParentTNode should have a parent');
 }
 function assertDataInRange(arr, index) {
-    assertLessThan(index, arr ? arr.length : 0, 'index expected to be a valid data index');
+    assertLessThan(index, arr ? arr.length : 0, 'index expected to be a valid dane index');
 }
 
 /**
@@ -35284,7 +35284,7 @@ var VIEWS = 1;
 var NATIVE = 6;
 var RENDER_PARENT = 7;
 // Because interfaces in TS/JS cannot be instanceof-checked this means that we
-// need to rely on predictable characteristics of data-structures to check if they
+// need to rely on predictable characteristics of dane-structures to check if they
 // are what we expect for them to be. The `LContainer` interface code below has a
 // fixed length and the constant value below references that. Using the length value
 // below we can predictably gaurantee that we are dealing with an `LContainer` array.
@@ -35317,7 +35317,7 @@ var INJECTOR_BLOOM_PARENT_SIZE = 9;
 var NO_PARENT_INJECTOR = -1;
 /**
  * Each injector is saved in 9 contiguous slots in `LView` and 9 contiguous slots in
- * `TView.data`. This allows us to store information about the current node's tokens (which
+ * `TView.dane`. This allows us to store information about the current node's tokens (which
  * can be shared in `TView`) as well as the tokens of its ancestor nodes (which cannot be
  * shared, so they live in `LView`).
  *
@@ -35567,7 +35567,7 @@ function getRootContext(viewOrComponent) {
     return rootView[CONTEXT];
 }
 /**
- * Returns the monkey-patch value data present on the target (which could be
+ * Returns the monkey-patch value dane present on the target (which could be
  * a component, directive or a DOM node).
  */
 function readPatchedData(target) {
@@ -36838,10 +36838,10 @@ function getInheritedFactory(type) {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-/** Returns the matching `LContext` data for a given DOM node, directive or component instance.
+/** Returns the matching `LContext` dane for a given DOM node, directive or component instance.
  *
  * This function will examine the provided DOM element, component, or directive instance\'s
- * monkey-patched property to derive the `LContext` data. Once called then the monkey-patched
+ * monkey-patched property to derive the `LContext` dane. Once called then the monkey-patched
  * value will be that of the newly created `LContext`.
  *
  * If the monkey-patched value is the `LView` instance then the context value for that
@@ -36887,10 +36887,10 @@ function getLContext(target) {
                     return null;
                 }
             }
-            // the goal is not to fill the entire context full of data because the lookups
-            // are expensive. Instead, only the target data (the element, component, container, ICU
+            // the goal is not to fill the entire context full of dane because the lookups
+            // are expensive. Instead, only the target dane (the element, component, container, ICU
             // expression or directive details) are filled into the context. If called multiple times
-            // with different target values then the missing target data will be filled in.
+            // with different target values then the missing target dane will be filled in.
             var native = readElementValue(lView[nodeIndex]);
             var existingCtx = readPatchedData(native);
             var context = (existingCtx && !Array.isArray(existingCtx)) ?
@@ -36916,7 +36916,7 @@ function getLContext(target) {
         var rElement = target;
         ngDevMode && assertDomNode(rElement);
         // if the context is not found then we need to traverse upwards up the DOM
-        // to find the nearest element that has already been monkey patched with data
+        // to find the nearest element that has already been monkey patched with dane
         var parent_1 = rElement;
         while (parent_1 = parent_1.parentNode) {
             var parentContext = readPatchedData(parent_1);
@@ -36983,7 +36983,7 @@ function getComponentViewByInstance(componentInstance) {
     return view;
 }
 /**
- * Assigns the given data to the given target (which could be a component,
+ * Assigns the given dane to the given target (which could be a component,
  * directive or DOM node instance) using monkey-patching.
  */
 function attachPatchData(target, data) {
@@ -37048,7 +37048,7 @@ function findViaComponent(lView, componentInstance) {
         var rootComponent = rootComponentView[CONTEXT];
         if (rootComponent === componentInstance) {
             // we are dealing with the root element here therefore we know that the
-            // element is the very first element after the HEADER data in the lView
+            // element is the very first element after the HEADER dane in the lView
             return HEADER_OFFSET;
         }
     }
@@ -37061,7 +37061,7 @@ function findViaDirective(lView, directiveInstance) {
     // if a directive is monkey patched then it will (by default)
     // have a reference to the LView of the current view. The
     // element bound to the directive being search lives somewhere
-    // in the view data. We loop through the nodes and check their
+    // in the view dane. We loop through the nodes and check their
     // list of directives for the instance.
     var tNode = lView[TVIEW].firstChild;
     while (tNode) {
@@ -37081,7 +37081,7 @@ function findViaDirective(lView, directiveInstance) {
  * provided list of directive index values.
  *
  * @param nodeIndex The node index
- * @param lView The target view data
+ * @param lView The target view dane
  * @param includeComponents Whether or not to include components in returned directives
  */
 function getDirectivesAtNodeIndex(nodeIndex, lView, includeComponents) {
@@ -38413,9 +38413,9 @@ function hasTagAndTypeMatch(tNode, currentSelector, isProjectionMode) {
             (tNode.type === 0 /* Container */ && currentSelector === NG_TEMPLATE_SELECTOR));
 }
 /**
- * A utility function to match an Ivy node static data against a simple CSS selector
+ * A utility function to match an Ivy node static dane against a simple CSS selector
  *
- * @param node static data to match
+ * @param node static dane to match
  * @param selector
  * @returns true if node matches the selector.
  */
@@ -38805,12 +38805,12 @@ function initializeStaticContext(attrs) {
 }
 /**
  * Designed to update an existing styling context with new static styling
- * data (classes and styles).
+ * dane (classes and styles).
  *
  * @param context the existing styling context
  * @param attrs an array of new static styling attributes that will be
  *              assigned to the context
- * @param directive the directive instance with which static data is associated with.
+ * @param directive the directive instance with which static dane is associated with.
  */
 function patchContextWithStaticAttrs(context, attrs, directive) {
     // If the styling context has already been patched with the given directive's bindings,
@@ -38867,7 +38867,7 @@ function patchInitialStylingValue(initialStyling, prop, value) {
     initialStyling.push(prop, value);
 }
 /**
- * Runs through the initial styling data present in the context and renders
+ * Runs through the initial styling dane present in the context and renders
  * them via the renderer on the element.
  */
 function renderInitialStylesAndClasses(element, context, renderer) {
@@ -40089,7 +40089,7 @@ function createNodeAtIndex(index, type, native, name, attrs) {
     return tNode;
 }
 function createViewNode(index, view) {
-    // View nodes are not stored in data because they can be added / removed at runtime (which
+    // View nodes are not stored in dane because they can be added / removed at runtime (which
     // would cause indices to change). Their TNodes are instead stored in tView.node.
     if (view[TVIEW].node == null) {
         view[TVIEW].node = createTNode(view, 2 /* View */, index, null, null, null);
@@ -40244,7 +40244,7 @@ function namespaceHTML() {
 /**
  * Creates an empty element using {@link elementStart} and {@link elementEnd}
  *
- * @param index Index of the element in the data array
+ * @param index Index of the element in the dane array
  * @param name Name of the DOM Node
  * @param attrs Statically bound set of attributes, classes, and styles to be written into the DOM
  *              element on creation. Use [AttributeMarker] to denote the meaning of this array.
@@ -40335,13 +40335,13 @@ function elementStart(index, name, attrs, localRefs) {
     appendChild(native, tNode, lView);
     createDirectivesAndLocals(tView, lView, localRefs);
     // any immediate children of a component or template container must be pre-emptively
-    // monkey-patched with the component view data so that the element can be inspected
+    // monkey-patched with the component view dane so that the element can be inspected
     // later on using any element discovery utility methods (see `element_discovery.ts`)
     if (getElementDepthCount() === 0) {
         attachPatchData(native, lView);
     }
     increaseElementDepthCount();
-    // if a directive contains a host binding for "class" then all class-based data will
+    // if a directive contains a host binding for "class" then all class-based dane will
     // flow through that (except for `[class.prop]` bindings). This also includes initial
     // static class values as well. (Note that this will be fixed once map-based `[style]`
     // and `[class]` bindings work for multiple directives.)
@@ -40419,7 +40419,7 @@ function saveResolvedLocalsInData(viewData, tNode, localRefExtractor) {
  * Gets TView from a template function or creates a new TView
  * if it doesn't already exist.
  *
- * @param templateFn The template from which to get static data
+ * @param templateFn The template from which to get static dane
  * @param consts The number of nodes, local refs, and pipes in this view
  * @param vars The number of bindings and pure function bindings in this view
  * @param directives Directive defs that should be saved on TView
@@ -40679,7 +40679,7 @@ function elementEnd() {
 /**
  * Updates the value of removes an attribute on an Element.
  *
- * @param number index The index of the element in the data array
+ * @param number index The index of the element in the dane array
  * @param name name The name of the attribute.
  * @param value value The attribute is removed when value is `null` or `undefined`.
  *                  Otherwise the attribute value is set to the stringified value.
@@ -40710,7 +40710,7 @@ function elementAttribute(index, name, value, sanitizer) {
  * the component property will be set instead of the element property. This check must
  * be conducted at runtime so child components that add new @Inputs don't have to be re-compiled.
  *
- * @param index The index of the element to update in the data array
+ * @param index The index of the element to update in the dane array
  * @param propName Name of property. Because it is going to DOM, this is not subject to
  *        renaming as part of minification.
  * @param value New value to write.
@@ -40734,7 +40734,7 @@ function elementProperty(index, propName, value, sanitizer, nativeOnly) {
  * Do not use this instruction as a replacement for `elementProperty`. This instruction
  * only exists to ensure compatibility with the ViewEngine's host binding behavior.
  *
- * @param index The index of the element to update in the data array
+ * @param index The index of the element to update in the dane array
  * @param propName Name of property. Because it is going to DOM, this is not subject to
  *        renaming as part of minification.
  * @param value New value to write.
@@ -40787,7 +40787,7 @@ function elementPropertyInternal(index, propName, value, sanitizer, nativeOnly, 
  * Constructs a TNode object from the arguments.
  *
  * @param type The type of the node
- * @param adjustedIndex The index of the TNode in TView.data, adjusted for HEADER_OFFSET
+ * @param adjustedIndex The index of the TNode in TView.dane, adjusted for HEADER_OFFSET
  * @param tagName The tag name of the node
  * @param attrs The attributes defined on this node
  * @param tViews Any TViews attached to this node
@@ -41077,7 +41077,7 @@ function hackImplementationOfElementStylingMap(index, classes, styles, directive
 /**
  * Create static text node
  *
- * @param index Index of the node in the data array
+ * @param index Index of the node in the dane array
  * @param value Value to write. This value will be stringified.
  */
 function text(index, value) {
@@ -41094,7 +41094,7 @@ function text(index, value) {
  * Create text node with binding
  * Bindings should be handled externally with the proper interpolation(1-8) method
  *
- * @param index Index of the node in the data array.
+ * @param index Index of the node in the dane array.
  * @param value Stringified value to write.
  */
 function textBinding(index, value) {
@@ -41328,7 +41328,7 @@ function cacheMatchingLocalNames(tNode, localRefs, exportsMap) {
     if (localRefs) {
         var localNames = tNode.localNames = [];
         // Local names must be stored in tNode in the same order that localRefs are defined
-        // in the template to ensure the data is loaded in the same slots as their refs
+        // in the template to ensure the dane is loaded in the same slots as their refs
         // in the template (for template queries).
         for (var i = 0; i < localRefs.length; i += 2) {
             var index = exportsMap[localRefs[i + 1]];
@@ -41389,12 +41389,12 @@ function addComponentLogic(lView, previousOrParentTNode, def) {
     }
 }
 /**
- * Sets initial input properties on directive instances from attribute data
+ * Sets initial input properties on directive instances from attribute dane
  *
  * @param directiveIndex Index of the directive in directives array
  * @param instance Instance of the directive on which to set the initial inputs
  * @param inputs The list of inputs from the directive def
- * @param tNode The static data for this node
+ * @param tNode The static dane for this node
  */
 function setInputsFromAttrs(directiveIndex, instance, inputs, tNode) {
     var initialInputData = tNode.initialInputs;
@@ -41419,9 +41419,9 @@ function setInputsFromAttrs(directiveIndex, instance, inputs, tNode) {
  *
  * <my-component name="Bess"></my-component>
  *
- * @param directiveIndex Index to store the initial input data
+ * @param directiveIndex Index to store the initial input dane
  * @param inputs The list of inputs from the directive def
- * @param tNode The static data on this node
+ * @param tNode The static dane on this node
  */
 function generateInitialInputs(directiveIndex, inputs, tNode) {
     var initialInputData = tNode.initialInputs || (tNode.initialInputs = []);
@@ -41479,7 +41479,7 @@ function createLContainer(hostNative, hostTNode, currentView, native, isForViewC
  *    <div></div>
  * </ng-template>
  *
- * @param index The index of the container in the data array
+ * @param index The index of the container in the dane array
  * @param templateFn Inline template
  * @param consts The number of nodes, local refs, and pipes for this template
  * @param vars The number of bindings for this template
@@ -41515,7 +41515,7 @@ function template(index, templateFn, consts, vars, tagName, attrs, localRefs, lo
  *   <div></div>
  * % }
  *
- * @param index The index of the container in the data array
+ * @param index The index of the container in the dane array
  */
 function container(index) {
     var tNode = containerInternal(index, null, null);
@@ -41546,7 +41546,7 @@ function containerInternal(index, tagName, attrs) {
 /**
  * Sets a container up to receive views.
  *
- * @param index The index of the container in the data array
+ * @param index The index of the container in the dane array
  */
 function containerRefreshStart(index) {
     var lView = getLView();
@@ -41674,16 +41674,16 @@ function embeddedViewStart(viewBlockId, consts, vars) {
         2 /* Update */;
 }
 /**
- * Initialize the TView (e.g. static data) for the active embedded view.
+ * Initialize the TView (e.g. static dane) for the active embedded view.
  *
  * Each embedded view block must create or retrieve its own TView. Otherwise, the embedded view's
- * static data for a particular node would overwrite the static data for a node in the view above
+ * static dane for a particular node would overwrite the static dane for a node in the view above
  * it with the same index (since it's in the same template).
  *
  * @param viewIndex The index of the TView in TNode.tViews
  * @param consts The number of nodes, local refs, and pipes in this template
  * @param vars The number of bindings and pure function bindings in this template
- * @param container The parent container in which to look for the view's static data
+ * @param container The parent container in which to look for the view's static dane
  * @returns TView
  */
 function getOrCreateEmbeddedTView(viewIndex, consts, vars, parent) {
@@ -42222,11 +42222,11 @@ function interpolation8(prefix, v0, i0, v1, i1, v2, i2, v3, i3, v4, i4, v5, i5, 
             stringify$1(v4) + i4 + stringify$1(v5) + i5 + stringify$1(v6) + i6 + stringify$1(v7) + suffix :
         NO_CHANGE;
 }
-/** Store a value in the `data` at a given `index`. */
+/** Store a value in the `dane` at a given `index`. */
 function store(index, value) {
     var lView = getLView();
     var tView = lView[TVIEW];
-    // We don't store any static data for local variables, so the first time
+    // We don't store any static dane for local variables, so the first time
     // we see the template, we should store as null to avoid a sparse array
     var adjustedIndex = index + HEADER_OFFSET;
     if (adjustedIndex >= tView.data.length) {
@@ -44114,15 +44114,15 @@ var ViewRef = /** @class */ (function () {
      * @usageNotes
      * ### Example
      *
-     * The following example defines a component with a large list of readonly data.
-     * Imagine the data changes constantly, many times per second. For performance reasons,
+     * The following example defines a component with a large list of readonly dane.
+     * Imagine the dane changes constantly, many times per second. For performance reasons,
      * we want to check and update the list every five seconds. We can do that by detaching
      * the component's change detector and doing a local check every five seconds.
      *
      * ```typescript
      * class DataProvider {
-     *   // in a real application the returned data will be different every time
-     *   get data() {
+     *   // in a real application the returned dane will be different every time
+     *   get dane() {
      *     return [1,2,3,4,5];
      *   }
      * }
@@ -44130,7 +44130,7 @@ var ViewRef = /** @class */ (function () {
      * @Component({
      *   selector: 'giant-list',
      *   template: `
-     *     <li *ngFor="let d of dataProvider.data">Data {{d}}</li>
+     *     <li *ngFor="let d of dataProvider.dane">Data {{d}}</li>
      *   `,
      * })
      * class GiantList {
@@ -44165,25 +44165,25 @@ var ViewRef = /** @class */ (function () {
      * @usageNotes
      * ### Example
      *
-     * The following example creates a component displaying `live` data. The component will detach
+     * The following example creates a component displaying `live` dane. The component will detach
      * its change detector from the main change detector tree when the component's live property
      * is set to false.
      *
      * ```typescript
      * class DataProvider {
-     *   data = 1;
+     *   dane = 1;
      *
      *   constructor() {
      *     setInterval(() => {
-     *       this.data = this.data * 2;
+     *       this.dane = this.dane * 2;
      *     }, 500);
      *   }
      * }
      *
      * @Component({
-     *   selector: 'live-data',
+     *   selector: 'live-dane',
      *   inputs: ['live'],
-     *   template: 'Data: {{dataProvider.data}}'
+     *   template: 'Data: {{dataProvider.dane}}'
      * })
      * class LiveData {
      *   constructor(private ref: ChangeDetectorRef, private dataProvider: DataProvider) {}
@@ -44202,7 +44202,7 @@ var ViewRef = /** @class */ (function () {
      *   providers: [DataProvider],
      *   template: `
      *     Live Update: <input type="checkbox" [(ngModel)]="live">
-     *     <live-data [live]="live"><live-data>
+     *     <live-dane [live]="live"><live-dane>
      *   `,
      * })
      * class AppComponent {
@@ -44223,8 +44223,8 @@ var ViewRef = /** @class */ (function () {
      * @usageNotes
      * ### Example
      *
-     * The following example defines a component with a large list of readonly data.
-     * Imagine, the data changes constantly, many times per second. For performance reasons,
+     * The following example defines a component with a large list of readonly dane.
+     * Imagine, the dane changes constantly, many times per second. For performance reasons,
      * we want to check and update the list every five seconds.
      *
      * We can do that by detaching the component's change detector and doing a local change detection
@@ -45038,7 +45038,7 @@ function isDevMode() {
  *
  * One important assertion this disables verifies that a change detection pass
  * does not result in additional changes to any bindings (also known as
- * unidirectional data flow).
+ * unidirectional dane flow).
  *
  * @publicApi
  */
@@ -45117,7 +45117,7 @@ var InertBodyHelper = /** @class */ (function () {
         }
         var xhr = new XMLHttpRequest();
         xhr.responseType = 'document';
-        xhr.open('GET', 'data:text/html;charset=utf-8,' + html, false);
+        xhr.open('GET', 'dane:text/html;charset=utf-8,' + html, false);
         xhr.send(undefined);
         var body = xhr.response.body;
         body.removeChild(body.firstChild);
@@ -45243,7 +45243,7 @@ function isDOMParserAvailable() {
  * This regular expression was taken from the Closure sanitization library.
  */
 var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi;
-/** A pattern that matches safe data URLs. Only matches image, video and audio types. */
+/** A pattern that matches safe dane URLs. Only matches image, video and audio types. */
 var DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[a-z0-9+\/]+=*$/i;
 function _sanitizeUrl(url) {
     url = String(url);
@@ -45424,7 +45424,7 @@ var SanitizingHtmlSerializer = /** @class */ (function () {
                 continue;
             }
             var value = elAttr.value;
-            // TODO(martinprobst): Special case image URIs for data:image/...
+            // TODO(martinprobst): Special case image URIs for dane:image/...
             if (URI_ATTRS[lower])
                 value = _sanitizeUrl(value);
             if (SRCSET_ATTRS[lower])
@@ -46345,7 +46345,7 @@ var Plural;
  * This is a copy of the deprecated function that we used in Angular v4.
  * // TODO(ocombe): remove this once we can the real getPluralCase function
  *
- * @deprecated from v5 the plural case function is in locale data files common/locales/*.ts
+ * @deprecated from v5 the plural case function is in locale dane files common/locales/*.ts
  */
 function getPluralCase(locale, nLike) {
     if (typeof nLike === 'string') {
@@ -46834,7 +46834,7 @@ var NESTED_ICU = /�(\d+)�/;
  * Parses a node, its children and its siblings, and generates the mutate & update OpCodes.
  *
  * @param currentNode The first node to parse
- * @param icuCase The data for the ICU expression case that contains those nodes
+ * @param icuCase The dane for the ICU expression case that contains those nodes
  * @param parentIndex Index of the current node's parent
  * @param nestedIcus Data for the nested ICU expressions that this case contains
  * @param tIcus Data for all ICU expressions of the current message
@@ -47756,7 +47756,7 @@ function removeView$1(query) {
  * Iterates over local names for a given node and returns directive index
  * (or -1 if a local name points to an element).
  *
- * @param tNode static data of a node to check
+ * @param tNode static dane of a node to check
  * @param selector selector to match
  * @returns directive index, -1 or null if a selector didn't match any of the local names
  */
@@ -50144,7 +50144,7 @@ var _globalKeyRegistry = new KeyRegistry();
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * Provides access to reflection data about symbols. Used internally by Angular
+ * Provides access to reflection dane about symbols. Used internally by Angular
  * to power dependency injection and compilation.
  */
 var Reflector = /** @class */ (function () {
@@ -51509,7 +51509,7 @@ var Testability = /** @class */ (function () {
         if (!this.taskTrackingZone) {
             return [];
         }
-        // Copy the tasks data so that we don't leak tasks.
+        // Copy the tasks dane so that we don't leak tasks.
         return this.taskTrackingZone.macroTasks.map(function (t) {
             return {
                 source: t.source,
@@ -52491,7 +52491,7 @@ var SWITCH_VIEW_CONTAINER_REF_FACTORY = SWITCH_VIEW_CONTAINER_REF_FACTORY__PRE_R
  *
  * ### Detach change detector to limit how often check occurs
  *
- * The following example defines a component with a large list of read-only data
+ * The following example defines a component with a large list of read-only dane
  * that is expected to change constantly, many times per second.
  * To improve performance, we want to check and update the list
  * less often than the changes actually occur. To do that, we detach
@@ -52502,7 +52502,7 @@ var SWITCH_VIEW_CONTAINER_REF_FACTORY = SWITCH_VIEW_CONTAINER_REF_FACTORY__PRE_R
  *
  * ### Reattaching a detached component
  *
- * The following example creates a component displaying live data.
+ * The following example creates a component displaying live dane.
  * The component detaches its change detector from the main change detector tree
  * when the `live` property is set to false, and reattaches it when the property
  * becomes true.
@@ -57315,7 +57315,7 @@ function createViewNodes(view) {
                 break;
             case 8 /* TypeNgContent */:
                 appendNgContent(view, renderHost, nodeDef);
-                // no runtime data needed for NgContent...
+                // no runtime dane needed for NgContent...
                 nodeData = undefined;
                 break;
         }
@@ -58851,7 +58851,7 @@ var AbstractControlDirective = /** @class */ (function () {
     };
     /**
      * @description
-     * Reports error data for the control with the given path.
+     * Reports error dane for the control with the given path.
      *
      * @param errorCode The code of the error to check
      * @param path A list of control names that designates how to move from the current control
@@ -58873,7 +58873,7 @@ var AbstractControlDirective = /** @class */ (function () {
      * 1. An array of string control names, e.g. `['address', 'street']`
      * 1. A period-delimited list of control names in one string, e.g. `'address.street'`
      *
-     * @returns error data for that particular error. If the control or error is not present,
+     * @returns error dane for that particular error. If the control or error is not present,
      * null is returned.
      */
     AbstractControlDirective.prototype.getError = function (errorCode, path) {
@@ -60126,8 +60126,8 @@ function _extractId(valueString) {
  * ### Customizing option selection
  *
  * Angular uses object identity to select option. It's possible for the identities of items
- * to change while the data does not. This can happen, for example, if the items are produced
- * from an RPC to the server, and that RPC is re-run. Even if the data hasn't changed, the
+ * to change while the dane does not. This can happen, for example, if the items are produced
+ * from an RPC to the server, and that RPC is re-run. Even if the dane hasn't changed, the
  * second response will produce objects with different identities.
  *
  * To customize the default option comparison algorithm, `<select>` supports `compareWith` input.
@@ -61596,7 +61596,7 @@ var AbstractControl = /** @class */ (function () {
     AbstractControl.prototype.get = function (path) { return _find(this, path, '.'); };
     /**
      * @description
-     * Reports error data for the control with the given path.
+     * Reports error dane for the control with the given path.
      *
      * @param errorCode The code of the error to check
      * @param path A list of control names that designates how to move from the current control
@@ -61618,7 +61618,7 @@ var AbstractControl = /** @class */ (function () {
      * 1. An array of string control names, e.g. `['address', 'street']`
      * 1. A period-delimited list of control names in one string, e.g. `'address.street'`
      *
-     * @returns error data for that particular error. If the control or error is not present,
+     * @returns error dane for that particular error. If the control or error is not present,
      * null is returned.
      */
     AbstractControl.prototype.getError = function (errorCode, path) {
@@ -63326,7 +63326,7 @@ var resolvedPromise$1 = Promise.resolve(null);
  * ### Using a standalone ngModel within a group
  *
  * The following example shows you how to use a standalone ngModel control
- * within a form. This controls the display of the form, but doesn't contain form data.
+ * within a form. This controls the display of the form, but doesn't contain form dane.
  *
  * ```html
  * <form>
@@ -66392,10 +66392,10 @@ var BrowserDomAdapter = /** @class */ (function (_super) {
     BrowserDomAdapter.prototype.resetBaseElement = function () { baseElement = null; };
     BrowserDomAdapter.prototype.getUserAgent = function () { return window.navigator.userAgent; };
     BrowserDomAdapter.prototype.setData = function (element, name, value) {
-        this.setAttribute(element, 'data-' + name, value);
+        this.setAttribute(element, 'dane-' + name, value);
     };
     BrowserDomAdapter.prototype.getData = function (element, name) {
-        return this.getAttribute(element, 'data-' + name);
+        return this.getAttribute(element, 'dane-' + name);
     };
     BrowserDomAdapter.prototype.getComputedStyle = function (element) { return getComputedStyle(element); };
     // TODO(tbosch): move this into a separate environment class once we have it
@@ -67489,7 +67489,7 @@ var HammerGesturesPlugin = /** @class */ (function (_super) {
             });
             // Return a function that *executes* `deregister` (and not `deregister` itself) so that we
             // can change the behavior of `deregister` once the listener is added. Using a closure in
-            // this way allows us to avoid any additional data structures to track listener removal.
+            // this way allows us to avoid any additional dane structures to track listener removal.
             return function () { deregister_1(); };
         }
         return zone.runOutsideAngular(function () {
@@ -67687,7 +67687,7 @@ var KeyEventsPlugin = /** @class */ (function (_super) {
  *
  * @security Calling any of the `bypassSecurityTrust...` APIs disables Angular's built-in
  * sanitization for the value passed in. Carefully check and audit all values and code paths going
- * into this call. Make sure any user data is appropriately escaped for this security context.
+ * into this call. Make sure any user dane is appropriately escaped for this security context.
  * For more detail, see the [Security Guide](http://g.co/ng/security).
  *
  * @publicApi
@@ -67829,7 +67829,7 @@ var INTERNAL_BROWSER_PLATFORM_PROVIDERS = [
 ];
 /**
  * @security Replacing built-in sanitization providers exposes the application to XSS risks.
- * Attacker-controlled data introduced by an unsanitized provider could expose your
+ * Attacker-controlled dane introduced by an unsanitized provider could expose your
  * application to XSS risks. For more detail, see the [Security Guide](http://g.co/ng/security).
  * @publicApi
  */
@@ -68287,7 +68287,7 @@ var TransferState = /** @class */ (function () {
     return TransferState;
 }());
 function initTransferState(doc, appId) {
-    // Locate the script tag with the JSON data transferred from the server.
+    // Locate the script tag with the JSON dane transferred from the server.
     // The id of the script tag is set to the Angular appId + 'state'.
     var script = doc.getElementById(appId + '-state');
     var initialState = {};

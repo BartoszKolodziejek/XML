@@ -16,21 +16,37 @@ public class MainController {
 
     @RequestMapping(value = "/dane", method = RequestMethod.GET)
     public String dane(){
-        return "data/dane.xml";
+        return "dane/dane.xml";
     }
 
     @RequestMapping(value = "/patientsList", method = RequestMethod.GET)
     public String patientsTransform(){
-        return "transform/patients.xsl";
+        return "transforms/patients.xsl";
     }
 
     @RequestMapping(value = "/visitsList", method = RequestMethod.GET)
     public String visitsTransform(){
-        return "transform/visit.xsl";
+        return "transforms/visits.xsl";
     }
 
     @RequestMapping(value = "/receiptList", method = RequestMethod.GET)
     public String receiptsTransform(){
-        return "transform/receipts.xsl";
+        return "transforms/receipts.xsl";
     }
+
+    @RequestMapping(value = "/terminsList", method = RequestMethod.GET)
+    public String terminsTransform(){
+        return "transforms/termins.xsl";
+    }
+
+    @RequestMapping(value = "/workersList", method = RequestMethod.GET)
+    public String workersTransform(){
+        return "transforms/workers.xsl";
+    }
+
+    @RequestMapping(value = "/servicesList", method = RequestMethod.GET)
+    public String servicesTransform(){
+        return "transforms/services.xsl";
+    }
+
 }

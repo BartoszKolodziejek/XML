@@ -4209,8 +4209,8 @@ function patchEventTarget(_global, apis, patchOptions) {
             return false;
         }
         var eventNameToString = patchOptions && patchOptions.eventNameToString;
-        // a shared global taskData to pass data for scheduleEventTask
-        // so we do not need to create a new object just for pass some data
+        // a shared global taskData to pass dane for scheduleEventTask
+        // so we do not need to create a new object just for pass some dane
         var taskData = {};
         var nativeAddEventListener = proto[zoneSymbolAddEventListener] = proto[ADD_EVENT_LISTENER];
         var nativeRemoveEventListener = proto[zoneSymbol(REMOVE_EVENT_LISTENER)] =
@@ -4260,7 +4260,7 @@ function patchEventTarget(_global, apis, patchOptions) {
                         var existingTask = existingTasks[i];
                         if (existingTask === task) {
                             existingTasks.splice(i, 1);
-                            // set isRemoved to data for faster invokeTask check
+                            // set isRemoved to dane for faster invokeTask check
                             task.isRemoved = true;
                             if (existingTasks.length === 0) {
                                 // all tasks for the eventName + capture have gone,
@@ -4395,7 +4395,7 @@ function patchEventTarget(_global, apis, patchOptions) {
                     source = constructorName + addSource +
                         (eventNameToString ? eventNameToString(eventName) : eventName);
                 }
-                // do not create a new object as task.data to pass those things
+                // do not create a new object as task.dane to pass those things
                 // just use the global shared one
                 taskData.options = options;
                 if (once) {
@@ -4409,7 +4409,7 @@ function patchEventTarget(_global, apis, patchOptions) {
                 taskData.eventName = eventName;
                 taskData.isExisting = isExisting;
                 var data = useGlobalCallback ? OPTIMIZED_ZONE_EVENT_TASK_DATA : undefined;
-                // keep taskData into data to allow onScheduleEventTask to access the task information
+                // keep taskData into dane to allow onScheduleEventTask to access the task information
                 if (data) {
                     data.taskData = taskData;
                 }
@@ -4489,7 +4489,7 @@ function patchEventTarget(_global, apis, patchOptions) {
                     var existingTask = existingTasks[i];
                     if (compare(existingTask, delegate)) {
                         existingTasks.splice(i, 1);
-                        // set isRemoved to data for faster invokeTask check
+                        // set isRemoved to dane for faster invokeTask check
                         existingTask.isRemoved = true;
                         if (existingTasks.length === 0) {
                             // all tasks for the eventName + capture have gone,
@@ -5609,7 +5609,7 @@ Zone.__load_patch('XHR', function (global, Zone) {
         function placeholderCallback() { }
         function clearTask(task) {
             var data = task.data;
-            // Note - ideally, we would call data.target.removeEventListener here, but it's too late
+            // Note - ideally, we would call dane.target.removeEventListener here, but it's too late
             // to prevent it from firing. So instead, we store info for the event listener.
             data.aborted = true;
             return abortNative.apply(data.target, data.args);

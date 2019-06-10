@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=dane:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header\">\r\n  <img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJgI924yn5nQ7lpaxVqeix2UsCBwa-t-7UILjXjp_1cT6XkRVcTw\"/>\r\n</div>\r\n<div class=\"nav\">\r\n  <ul class=\"nav-bar\">\r\n    <li id=\"pacjenci\" (click)=\"setContext('pacjenci')\">pacjenci</li>\r\n    <li id=\"pracownicy\">pracownicy</li>\r\n    <li id=\"recepty\" (click)=\"setContext('recepty')\">recepty</li>\r\n    <li id=\"wizyty\" (click)=\"setContext('wizyty')\">wizyty</li>\r\n    <li id=\"uslugi\">uslugi</li>\r\n    <li id=\"wolneTerminy\">wolne Terminy</li>\r\n  </ul>\r\n</div>\r\n<div>\r\n  <table id=\"table\">\r\n    <thead id=\"header\">\r\n    </thead>\r\n    <tbody id=\"body\">\r\n    </tbody>\r\n  </table>\r\n</div>\r\n"
+module.exports = "<div class=\"header\">\r\n  <img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJgI924yn5nQ7lpaxVqeix2UsCBwa-t-7UILjXjp_1cT6XkRVcTw\"/>\r\n</div>\r\n<div class=\"nav\">\r\n  <ul class=\"nav-bar\">\r\n    <li id=\"pacjenci\" (click)=\"setContext('pacjenci')\">pacjenci</li>\r\n    <li id=\"pracownicy\" (click)=\"setContext('pracownicy')\">pracownicy</li>\r\n    <li id=\"recepty\" (click)=\"setContext('recepty')\">recepty</li>\r\n    <li id=\"wizyty\" (click)=\"setContext('wizyty')\">wizyty</li>\r\n    <li id=\"uslugi\" (click)=\"setContext('uslugi')\">usługi</li>\r\n    <li id=\"wolneTerminy\" (click)=\"setContext('terminy')\">wolne Terminy</li>\r\n  </ul>\r\n</div>\r\n<div>\r\n  <table id=\"table\">\r\n    <thead id=\"header\">\r\n    </thead>\r\n    <tbody id=\"body\">\r\n    </tbody>\r\n  </table>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -92,7 +92,7 @@ var AppComponent = /** @class */ (function () {
                 '<th scope="col">imie</th>\n' +
                 '<th scope="col">nazwisko</th>\n' +
                 '<th scope="col">pesel</th>\n' +
-                '<th scope="col">data rejestracji</th>';
+                '<th scope="col">dane rejestracji</th>';
         this.getAndTranformXml('patientsList');
     };
     AppComponent.prototype.loadWizyty = function () {
@@ -102,7 +102,7 @@ var AppComponent = /** @class */ (function () {
                 '<th scope="col">pacjent</th>\n' +
                 '<th scope="col">lekarz</th>\n' +
                 '<th scope="col">usluga</th>\n' +
-                '<th scope="col">data</th>';
+                '<th scope="col">dane</th>';
         this.getAndTranformXml('visitsList');
     };
     AppComponent.prototype.loadRecepty = function () {
@@ -112,6 +112,30 @@ var AppComponent = /** @class */ (function () {
                 '<th scope="col">lekarz</th>\n' +
                 '<th scope="col">leki</th>\n';
         this.getAndTranformXml('receiptList');
+    };
+    AppComponent.prototype.loadUslugi = function () {
+        this.document.getElementById('table').innerHTML = '<thead id="header"></thead>';
+        document.getElementById('header').innerHTML =
+            '<th scope="col">nazwa</th>' +
+                '<th scope="col">cena</th>\n';
+        this.getAndTranformXml('servicesList');
+    };
+    AppComponent.prototype.loadTerminy = function () {
+        this.document.getElementById('table').innerHTML = '<thead id="header"></thead>';
+        document.getElementById('header').innerHTML =
+            '<th scope="col">lekarz</th>' +
+                '<th scope="col">termin</th>\n';
+        this.getAndTranformXml('terminsList');
+    };
+    AppComponent.prototype.loadPracownicy = function () {
+        this.document.getElementById('table').innerHTML = '<thead id="header"></thead>';
+        document.getElementById('header').innerHTML =
+            '<th scope="col">id</th>\n' +
+                '<th scope="col">imie</th>\n' +
+                '<th scope="col">nazwisko</th>\n' +
+                '<th scope="col">płaca</th>\n' +
+                '<th scope="col">rola</th>';
+        this.getAndTranformXml('workersList');
     };
     AppComponent.prototype.setContext = function (context) {
         switch (context) {
@@ -123,6 +147,15 @@ var AppComponent = /** @class */ (function () {
                 break;
             case 'recepty':
                 this.loadRecepty();
+                break;
+            case 'uslugi':
+                this.loadUslugi();
+                break;
+            case 'terminy':
+                this.loadTerminy();
+                break;
+            case 'pracownicy':
+                this.loadPracownicy();
                 break;
         }
     };

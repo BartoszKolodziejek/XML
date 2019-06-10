@@ -63,6 +63,34 @@ export class AppComponent {
     this.getAndTranformXml('receiptList');
   }
 
+  loadUslugi() {
+    this.document.getElementById('table').innerHTML = '<thead id="header"></thead>';
+    document.getElementById('header').innerHTML =
+      '<th scope="col">nazwa</th>' +
+      '<th scope="col">cena</th>\n';
+    this.getAndTranformXml('servicesList');
+  }
+
+  loadTerminy() {
+    this.document.getElementById('table').innerHTML = '<thead id="header"></thead>';
+    document.getElementById('header').innerHTML =
+      '<th scope="col">lekarz</th>' +
+      '<th scope="col">termin</th>\n';
+    this.getAndTranformXml('terminsList');
+  }
+
+  loadPracownicy() {
+    this.document.getElementById('table').innerHTML = '<thead id="header"></thead>';
+    document.getElementById('header').innerHTML =
+      '<th scope="col">id</th>\n' +
+      '<th scope="col">imie</th>\n' +
+      '<th scope="col">nazwisko</th>\n' +
+      '<th scope="col">płaca</th>\n' +
+      '<th scope="col">rola</th>';
+    this.getAndTranformXml('workersList');
+  }
+
+
   setContext(context: string) {
     switch (context) {
       case 'pacjenci':
@@ -73,6 +101,15 @@ export class AppComponent {
         break;
       case 'recepty':
         this.loadRecepty();
+        break;
+      case 'uslugi':
+        this.loadUslugi();
+        break;
+      case 'terminy':
+        this.loadTerminy();
+        break;
+      case 'pracownicy':
+        this.loadPracownicy();
         break;
     }
   }
