@@ -196,8 +196,6 @@
       <zuzyteMaterialyStomatologiczne>TASMA_POLIESTROWA</zuzyteMaterialyStomatologiczne>
 	  <zuzyteMaterialyStomatologiczne>PASTY_POLERSKIE</zuzyteMaterialyStomatologiczne>
 	  <zuzyteMaterialyStomatologiczne>KALKI_ARTYKULACYJNE</zuzyteMaterialyStomatologiczne>
-      <!--1 or more repetitions:-->
-      <znieczulenia></znieczulenia>
     </stom:wizyta>
 	
 	<stom:wizyta id="4">

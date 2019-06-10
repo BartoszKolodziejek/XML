@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<app-patient-list>\r\n</app-patient-list>\r\n"
+module.exports = "<div class=\"header\">\r\n  <img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJgI924yn5nQ7lpaxVqeix2UsCBwa-t-7UILjXjp_1cT6XkRVcTw\"/>\r\n</div>\r\n<div class=\"nav\">\r\n  <ul class=\"nav-bar\">\r\n    <li id=\"pacjenci\" (click)=\"setContext('pacjenci')\">pacjenci</li>\r\n    <li id=\"pracownicy\">pracownicy</li>\r\n    <li id=\"recepty\">recepty</li>\r\n    <li id=\"wizyty\" (click)=\"setContext('wizyty')\">wizyty</li>\r\n    <li id=\"uslugi\">uslugi</li>\r\n    <li id=\"wolneTerminy\">wolne Terminy</li>\r\n  </ul>\r\n</div>\r\n<div>\r\n  <table id=\"table\">\r\n    <thead id=\"header\">\r\n    </thead>\r\n    <tbody id=\"body\">\r\n    </tbody>\r\n  </table>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -57,18 +57,72 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
-        this.title = 'app works!';
+    function AppComponent(document) {
+        this.document = document;
+        this.url = null;
+        this.context = null;
+        this.url = document.location.protocol + '//' + document.location.hostname + ':' + document.location.port;
     }
+    AppComponent.prototype.getAndTranformXml = function (source) {
+        var xsltProcessor = new XSLTProcessor();
+        var XMLHTTPRequest = new XMLHttpRequest();
+        XMLHTTPRequest.open('GET', this.url + '/' + source, false);
+        XMLHTTPRequest.send(null);
+        var xsl = XMLHTTPRequest.responseXML;
+        console.log(xsl);
+        xsltProcessor.importStylesheet(xsl);
+        XMLHTTPRequest.open('GET', this.url + '/dane', false);
+        XMLHTTPRequest.send();
+        console.log(XMLHTTPRequest.responseXML);
+        var result = xsltProcessor.transformToDocument(XMLHTTPRequest.responseXML);
+        console.log(new XMLSerializer().serializeToString(result.documentElement));
+        this.document.getElementById('table').innerHTML =
+            this.document.getElementById('table').innerHTML +
+                new XMLSerializer().serializeToString(result.documentElement);
+    };
+    AppComponent.prototype.loadPacjenci = function () {
+        this.document.getElementById('body').innerHTML = '';
+        document.getElementById('header').innerHTML =
+            '<th scope="col">id</th>\n' +
+                '<th scope="col">imie</th>\n' +
+                '<th scope="col">nazwisko</th>\n' +
+                '<th scope="col">pesel</th>\n' +
+                '<th scope="col">dataDupa rejestracji</th>';
+        this.getAndTranformXml('patientsList');
+    };
+    AppComponent.prototype.loadWizyty = function () {
+        this.document.getElementById('table').innerHTML = '<thead id="header"></thead>';
+        document.getElementById('header').innerHTML =
+            '<th scope="col">id</th>\n' +
+                '<th scope="col">pacjent</th>\n' +
+                '<th scope="col">lekarz</th>\n' +
+                '<th scope="col">usluga</th>\n' +
+                '<th scope="col">data</th>';
+        this.getAndTranformXml('visitsList');
+    };
+    AppComponent.prototype.setContext = function (context) {
+        switch (context) {
+            case 'pacjenci':
+                this.loadPacjenci();
+                break;
+            case 'wizyty':
+                this.loadWizyty();
+                break;
+        }
+    };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DOCUMENT"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Document])
     ], AppComponent);
     return AppComponent;
 }());
@@ -92,8 +146,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _patient_list_patient_list_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patient-list/patient-list.component */ "./src/app/patient-list/patient-list.component.ts");
-
 
 
 
@@ -106,7 +158,6 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _patient_list_patient_list_component__WEBPACK_IMPORTED_MODULE_5__["PatientListComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -117,83 +168,6 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/patient-list/patient-list.component.css":
-/*!*********************************************************!*\
-  !*** ./src/app/patient-list/patient-list.component.css ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhdGllbnQtbGlzdC9wYXRpZW50LWxpc3QuY29tcG9uZW50LmNzcyJ9 */"
-
-/***/ }),
-
-/***/ "./src/app/patient-list/patient-list.component.html":
-/*!**********************************************************!*\
-  !*** ./src/app/patient-list/patient-list.component.html ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<table id=\"table\">\r\n  <thead>\r\n  <th scope=\"col\">id</th>\r\n  <th scope=\"col\">imie</th>\r\n  <th scope=\"col\">nazwisko</th>\r\n  <th scope=\"col\">pesel</th>\r\n  <th scope=\"col\">data rejestracji</th>\r\n  </thead>\r\n</table>\r\n"
-
-/***/ }),
-
-/***/ "./src/app/patient-list/patient-list.component.ts":
-/*!********************************************************!*\
-  !*** ./src/app/patient-list/patient-list.component.ts ***!
-  \********************************************************/
-/*! exports provided: PatientListComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PatientListComponent", function() { return PatientListComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-
-
-
-var PatientListComponent = /** @class */ (function () {
-    function PatientListComponent(document) {
-        this.document = document;
-        this.url = null;
-        this.url = document.location.protocol + '//' + document.location.hostname + ':' + document.location.port;
-    }
-    PatientListComponent.prototype.ngOnInit = function () {
-        var xsltProcessor = new XSLTProcessor();
-        var XMLHTTPRequest = new XMLHttpRequest();
-        XMLHTTPRequest.open('GET', this.url + '/patientsList', false);
-        XMLHTTPRequest.send(null);
-        var xsl = XMLHTTPRequest.responseXML;
-        console.log(xsl);
-        xsltProcessor.importStylesheet(xsl);
-        XMLHTTPRequest.open('GET', this.url + '/dane', false);
-        XMLHTTPRequest.send();
-        console.log(XMLHTTPRequest.responseXML);
-        var result = xsltProcessor.transformToDocument(XMLHTTPRequest.responseXML);
-        console.log(new XMLSerializer().serializeToString(result.documentElement));
-        this.document.getElementById('table').innerHTML =
-            this.document.getElementById('table').innerHTML +
-                new XMLSerializer().serializeToString(result.documentElement);
-    };
-    PatientListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-patient-list',
-            template: __webpack_require__(/*! ./patient-list.component.html */ "./src/app/patient-list/patient-list.component.html"),
-            styles: [__webpack_require__(/*! ./patient-list.component.css */ "./src/app/patient-list/patient-list.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DOCUMENT"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Document])
-    ], PatientListComponent);
-    return PatientListComponent;
 }());
 
 

@@ -16,11 +16,16 @@ public class MainController {
 
     @RequestMapping(value = "/dane", method = RequestMethod.GET)
     public String dane(){
-        return "xml/xmlDane.xsl";
+        return "data/dane.xml";
     }
 
     @RequestMapping(value = "/patientsList", method = RequestMethod.GET)
     public String patientsTransform(){
-        return "xslt/patientsList.xml";
+        return "transform/patientsList.xsl";
+    }
+
+    @RequestMapping(value = "/visitsList", method = RequestMethod.GET)
+    public String visitsTransform(){
+        return "transform/visits.xsl";
     }
 }
