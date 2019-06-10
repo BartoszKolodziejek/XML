@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE stom:gabinetStomatologiczy [
+        <!ELEMENT stom:gabinetStomatologiczy (stom:listaPacjentow|stom:listaWizyt|stom:listaPracownikow|stom:listaRecept|stom:terminarzWizyt|stom:listaUslug)*>
+        <!ATTLIST stom:gabinetStomatologiczy
+                xmlns:stom CDATA #REQUIRED>
+        <!ELEMENT stom:listaPacjentow (stom:pacjent)*>
+        <!ELEMENT stom:pacjent (imie|nazwisko|pesel|dataRejestracji)*>
+        <!ATTLIST stom:pacjent
+                id CDATA #REQUIRED>
+        <!ELEMENT imie (#PCDATA)>
+        <!ELEMENT nazwisko (#PCDATA)>
+        <!ELEMENT pesel (#PCDATA)>
+        <!ELEMENT dataRejestracji (#PCDATA)>
+        <!ELEMENT stom:listaWizyt (stom:wizyta)*>
+        <!ELEMENT stom:wizyta (pacjent|lekarz|kiedy|opisUslugi|rodzajPlatnosci|zuzytySprzetDiagnostyczny|zuzyteMaterialyStomatologiczne|znieczulenia|kontaktPoWizycie)*>
+        <!ATTLIST stom:wizyta
+                id CDATA #REQUIRED>
+        <!ELEMENT pacjent (imie|nazwisko|pesel|dataRejestracji)*>
+        <!ATTLIST pacjent
+                id CDATA #REQUIRED>
+        <!ELEMENT lekarz (placa|imie|nazwisko|rolaPracownika)*>
+        <!ATTLIST lekarz
+                id CDATA #REQUIRED>
+        <!ELEMENT placa (kwota|waluta)*>
+        <!ELEMENT kwota (#PCDATA)>
+        <!ELEMENT waluta (#PCDATA)>
+        <!ELEMENT rolaPracownika (#PCDATA)>
+        <!ELEMENT kiedy (#PCDATA)>
+        <!ELEMENT opisUslugi (nazwa|cenaUslugi)*>
+        <!ELEMENT nazwa (#PCDATA)>
+        <!ELEMENT cenaUslugi (kwota|waluta)*>
+        <!ELEMENT rodzajPlatnosci (#PCDATA)>
+        <!ELEMENT zuzytySprzetDiagnostyczny (#PCDATA)>
+        <!ELEMENT zuzyteMaterialyStomatologiczne (#PCDATA)>
+        <!ELEMENT znieczulenia (#PCDATA)>
+        <!ELEMENT kontaktPoWizycie (rodzajKontaktu|wiadomosc)*>
+        <!ELEMENT rodzajKontaktu (#PCDATA)>
+        <!ELEMENT wiadomosc (#PCDATA)>
+        <!ELEMENT stom:listaPracownikow (stom:lekarz|stom:pracownikCywilny)*>
+        <!ELEMENT stom:lekarz (placa|imie|nazwisko|rolaPracownika)*>
+        <!ATTLIST stom:lekarz
+                id CDATA #REQUIRED>
+        <!ELEMENT stom:pracownikCywilny (placa|imie|nazwisko|rolaPracownika)*>
+        <!ATTLIST stom:pracownikCywilny
+                id CDATA #REQUIRED>
+        <!ELEMENT stom:listaRecept (stom:recepta)*>
+        <!ELEMENT stom:recepta (pacjent|lekarz|data|listaLekow)*>
+        <!ELEMENT data (#PCDATA)>
+        <!ELEMENT listaLekow (lek)*>
+        <!ELEMENT lek (nazwa|producent|procentRefundacji)*>
+        <!ELEMENT producent (#PCDATA)>
+        <!ELEMENT procentRefundacji (#PCDATA)>
+        <!ELEMENT stom:terminarzWizyt (stom:wolnyTermin)*>
+        <!ELEMENT stom:wolnyTermin (lekarz|czas)*>
+        <!ELEMENT czas (#PCDATA)>
+        <!ELEMENT stom:listaUslug (stom:usluga)*>
+        <!ELEMENT stom:usluga (nazwa|cenaUslugi)*>
+        ]>
+<stom:gabinetStomatologiczy xmlns:stom="http://math.uni.lodz.pl/stomatologia">
+    <!--Optional:-->
+    <stom:listaPacjentow>
+        <!--1 or more repetitions:-->
+        <stom:pacjent id="1">
+            <imie>Jan</imie>
+            <nazwisko>Kowalski</nazwisko>
+            <pesel>69072011631</pesel>
+            <dataRejestracji>2008-09-29</dataRejestracji>
+        </stom:pacjent>
+        <stom:pacjent id="2">
+            <imie>Tomasz</imie>
+            <nazwisko>Adamek</nazwisko>
+            <pesel>51081248492</pesel>
+            <dataRejestracji>2015-10-19</dataRejestracji>
+        </stom:pacjent>
+        <stom:pacjent id="3">
+            <imie>Robert</imie>
+            <nazwisko>Lewandowski</nazwisko>
+            <pesel>71050392531</pesel>
+            <dataRejestracji>2007-12-10</dataRejestracji>
+        </stom:pacjent>
+        <stom:pacjent id="4">
+            <imie>Krystian</imie>
+            <nazwisko>Dabrowski</nazwisko>
+            <pesel>51121932772</pesel>
+            <dataRejestracji>2018-02-05</dataRejestracji>
+        </stom:pacjent>
+        <stom:pacjent id="5">
+            <imie>Jakub</imie>
+            <nazwisko>Blaszczykowski</nazwisko>
+            <pesel>69090918499</pesel>
+            <dataRejestracji>2011-03-01</dataRejestracji>
+        </stom:pacjent>
+        <stom:pacjent id="6">
+            <imie>Janina</imie>
+            <nazwisko>Kowalska</nazwisko>
+            <pesel>52111116169</pesel>
+            <dataRejestracji>2018-09-11</dataRejestracji>
+        </stom:pacjent>
+        <stom:pacjent id="7">
+            <imie>Otylia</imie>
+            <nazwisko>Jedrzejczak</nazwisko>
+            <pesel>85120495545</pesel>
+            <dataRejestracji>2001-04-04</dataRejestracji>
+        </stom:pacjent>
+        <stom:pacjent id="8">
+            <imie>Agnieszka</imie>
+            <nazwisko>Radwanska</nazwisko>
+            <pesel>00311096729</pesel>
+            <dataRejestracji>2002-08-02</dataRejestracji>
+        </stom:pacjent>
+        <stom:pacjent id="9">
+            <imie>Olga</imie>
+            <nazwisko>Kowalewska</nazwisko>
+            <pesel>98031339442</pesel>
+            <dataRejestracji>2014-05-01</dataRejestracji>
+        </stom:pacjent>
+        <stom:pacjent id="10">
+            <imie>Kamila</imie>
+            <nazwisko>Porczyk</nazwisko>
+            <pesel>48042366863</pesel>
+            <dataRejestracji>2012-12-12</dataRejestracji>
+        </stom:pacjent>
+    </stom:listaPacjentow>
+    <!--Optional:-->
+    <stom:listaWizyt>
+        <!--1 or more repetitions:-->
+        <stom:wizyta id="1">
+            <pacjent id="1">
+                <imie>Jan</imie>
+                <nazwisko>Kowalski</nazwisko>
+                <pesel>69072011631</pesel>
+                <dataRejestracji>2008-09-29</dataRejestracji>
+            </pacjent>
+            <lekarz id="1">
+                <placa>
+                    <kwota>4500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Gregory</imie>
+                <nazwisko>House</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2009-08-10T19:27:14+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>PLOMBOWANIE</nazwa>
+                <cenaUslugi>
+                    <kwota>100</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
+            <!--1 or more repetitions:-->
+            <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
+            <zuzytySprzetDiagnostyczny>KONCOWKA_STANDARD</zuzytySprzetDiagnostyczny>
+            <!--1 or more repetitions:-->
+            <zuzyteMaterialyStomatologiczne>TASMA_POLIESTROWA</zuzyteMaterialyStomatologiczne>
+            <!--1 or more repetitions:-->
+            <znieczulenia>NASIEKOWE</znieczulenia>
+            <kontaktPoWizycie>
+                <rodzajKontaktu>EMAIL</rodzajKontaktu>
+                <wiadomosc>Mozliwosc zgloszenia reklamacji?</wiadomosc>
+            </kontaktPoWizycie>
+        </stom:wizyta>
+        <stom:wizyta id="2">
+            <pacjent id="1">
+                <imie>Jan</imie>
+                <nazwisko>Kowalski</nazwisko>
+                <pesel>69072011631</pesel>
+                <dataRejestracji>2008-09-29</dataRejestracji>
+            </pacjent>
+            <lekarz id="2">
+                <placa>
+                    <kwota>3500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>James</imie>
+                <nazwisko>Wilson</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2009-08-19T19:27:14+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>USUWANIE</nazwa>
+                <cenaUslugi>
+                    <kwota>100</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>KARTA</rodzajPlatnosci>
+            <!--1 or more repetitions:-->
+            <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
+            <zuzytySprzetDiagnostyczny>SZCZYPCE</zuzytySprzetDiagnostyczny>
+            <!--1 or more repetitions:-->
+            <zuzyteMaterialyStomatologiczne>NICI_RETRAKCYJNE</zuzyteMaterialyStomatologiczne>
+            <!--1 or more repetitions:-->
+            <znieczulenia>PRZEWODOWE</znieczulenia>
+            <kontaktPoWizycie>
+                <rodzajKontaktu>EMAIL</rodzajKontaktu>
+                <wiadomosc>Nadmierny ból po zabiegu. Możliwe działania?</wiadomosc>
+            </kontaktPoWizycie>
+        </stom:wizyta>
+
+        <stom:wizyta id="3">
+            <pacjent id="2">
+                <imie>Tomasz</imie>
+                <nazwisko>Adamek</nazwisko>
+                <pesel>51081248492</pesel>
+                <dataRejestracji>2015-10-19</dataRejestracji>
+            </pacjent>
+            <lekarz id="3">
+                <placa>
+                    <kwota>4000</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Allison</imie>
+                <nazwisko>Cameron</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2016-08-19T17:27:14+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>WYBIELANIE</nazwa>
+                <cenaUslugi>
+                    <kwota>300</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
+            <!--1 or more repetitions:-->
+            <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
+            <!--1 or more repetitions:-->
+            <zuzyteMaterialyStomatologiczne>TASMA_POLIESTROWA</zuzyteMaterialyStomatologiczne>
+            <zuzyteMaterialyStomatologiczne>PASTY_POLERSKIE</zuzyteMaterialyStomatologiczne>
+            <zuzyteMaterialyStomatologiczne>KALKI_ARTYKULACYJNE</zuzyteMaterialyStomatologiczne>
+        </stom:wizyta>
+
+        <stom:wizyta id="4">
+            <pacjent id="2">
+                <imie>Tomasz</imie>
+                <nazwisko>Adamek</nazwisko>
+                <pesel>51081248492</pesel>
+                <dataRejestracji>2015-10-19</dataRejestracji>
+            </pacjent>
+            <lekarz id="3">
+                <placa>
+                    <kwota>4000</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Allison</imie>
+                <nazwisko>Cameron</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2018-01-19T14:00:14+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>LECZENIEKANALOWE</nazwa>
+                <cenaUslugi>
+                    <kwota>200</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
+            <!--1 or more repetitions:-->
+            <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
+            <zuzytySprzetDiagnostyczny>KONCOWKA_PNEUMATYCZNA</zuzytySprzetDiagnostyczny>
+            <!--1 or more repetitions:-->
+        </stom:wizyta>
+
+        <stom:wizyta id="5">
+            <pacjent id="3">
+                <imie>Robert</imie>
+                <nazwisko>Lewandowski</nazwisko>
+                <pesel>71050392531</pesel>
+                <dataRejestracji>2007-12-10</dataRejestracji>
+            </pacjent>
+            <lekarz id="4">
+                <placa>
+                    <kwota>3800</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Remy</imie>
+                <nazwisko>Hadley</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2012-01-19T21:10:14+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>PRZEGLAD</nazwa>
+                <cenaUslugi>
+                    <kwota>50</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
+            <!--1 or more repetitions:-->
+            <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
+        </stom:wizyta>
+
+        <stom:wizyta id="6">
+            <pacjent id="3">
+                <imie>Robert</imie>
+                <nazwisko>Lewandowski</nazwisko>
+                <pesel>71050392531</pesel>
+                <dataRejestracji>2007-12-10</dataRejestracji>
+            </pacjent>
+            <lekarz id="4">
+                <placa>
+                    <kwota>3800</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Remy</imie>
+                <nazwisko>Hadley</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2018-08-03T14:00:14+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>PRZEGLAD</nazwa>
+                <cenaUslugi>
+                    <kwota>50</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
+            <!--1 or more repetitions:-->
+            <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
+        </stom:wizyta>
+
+        <stom:wizyta id="7">
+            <pacjent id="4">
+                <imie>Krystian</imie>
+                <nazwisko>Dabrowski</nazwisko>
+                <pesel>51121932772</pesel>
+                <dataRejestracji>2018-02-05</dataRejestracji>
+            </pacjent>
+            <lekarz id="4">
+                <placa>
+                    <kwota>3800</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Remy</imie>
+                <nazwisko>Hadley</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2018-08-11T07:11:14+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>RENTGEN</nazwa>
+                <cenaUslugi>
+                    <kwota>70</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>KARTA</rodzajPlatnosci>
+            <kontaktPoWizycie>
+                <rodzajKontaktu>EMAIL</rodzajKontaktu>
+                <wiadomosc>Brak wyników w umówionym terminie? Prośba o jak najszybsze przesłanie.</wiadomosc>
+            </kontaktPoWizycie>
+        </stom:wizyta>
+
+        <stom:wizyta id="8">
+            <pacjent id="5">
+                <imie>Jakub</imie>
+                <nazwisko>Blaszczykowski</nazwisko>
+                <pesel>69090918499</pesel>
+                <dataRejestracji>2011-03-01</dataRejestracji>
+            </pacjent>
+            <lekarz id="2">
+                <placa>
+                    <kwota>3500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>James</imie>
+                <nazwisko>Wilson</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2016-03-10T10:00:14+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>LAKIEROWANIE</nazwa>
+                <cenaUslugi>
+                    <kwota>220</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
+            <!--1 or more repetitions:-->
+            <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
+            <!--1 or more repetitions:-->
+            <zuzyteMaterialyStomatologiczne>TASMA_POLIESTROWA</zuzyteMaterialyStomatologiczne>
+            <zuzyteMaterialyStomatologiczne>PASTY_POLERSKIE</zuzyteMaterialyStomatologiczne>
+        </stom:wizyta>
+
+        <stom:wizyta id="9">
+            <pacjent id="6">
+                <imie>Janina</imie>
+                <nazwisko>Kowalska</nazwisko>
+                <pesel>52111116169</pesel>
+                <dataRejestracji>2018-09-11</dataRejestracji>
+            </pacjent>
+            <lekarz id="2">
+                <placa>
+                    <kwota>3500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>James</imie>
+                <nazwisko>Wilson</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2019-05-11T11:55:14+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>USUWANIE</nazwa>
+                <cenaUslugi>
+                    <kwota>100</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
+            <!--1 or more repetitions:-->
+            <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
+            <zuzytySprzetDiagnostyczny>KONCOWKA_STANDARD</zuzytySprzetDiagnostyczny>
+            <!--1 or more repetitions:-->
+            <zuzyteMaterialyStomatologiczne>TASMA_POLIESTROWA</zuzyteMaterialyStomatologiczne>
+            <!--1 or more repetitions:-->
+            <znieczulenia>NASIEKOWE</znieczulenia>
+        </stom:wizyta>
+
+        <stom:wizyta id="10">
+            <pacjent id="6">
+                <imie>Janina</imie>
+                <nazwisko>Kowalska</nazwisko>
+                <pesel>52111116169</pesel>
+                <dataRejestracji>2018-09-11</dataRejestracji>
+            </pacjent>
+            <lekarz id="2">
+                <placa>
+                    <kwota>3500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>James</imie>
+                <nazwisko>Wilson</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2019-06-01T19:27:14+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>USUWANIE</nazwa>
+                <cenaUslugi>
+                    <kwota>100</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
+            <!--1 or more repetitions:-->
+            <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
+            <zuzytySprzetDiagnostyczny>KONCOWKA_STANDARD</zuzytySprzetDiagnostyczny>
+            <!--1 or more repetitions:-->
+            <zuzyteMaterialyStomatologiczne>TASMA_POLIESTROWA</zuzyteMaterialyStomatologiczne>
+            <!--1 or more repetitions:-->
+            <znieczulenia>NASIEKOWE</znieczulenia>
+        </stom:wizyta>
+
+        <stom:wizyta id="11">
+            <pacjent id="7">
+                <imie>Otylia</imie>
+                <nazwisko>Jedrzejczak</nazwisko>
+                <pesel>85120495545</pesel>
+                <dataRejestracji>2001-04-04</dataRejestracji>
+            </pacjent>
+            <lekarz id="1">
+                <placa>
+                    <kwota>4500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Gregory</imie>
+                <nazwisko>House</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2006-04-11T10:00:00+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>PLOMBOWANIE</nazwa>
+                <cenaUslugi>
+                    <kwota>100</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
+            <!--1 or more repetitions:-->
+            <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
+            <zuzytySprzetDiagnostyczny>KONCOWKA_STANDARD</zuzytySprzetDiagnostyczny>
+            <!--1 or more repetitions:-->
+            <znieczulenia>NASIEKOWE</znieczulenia>
+            <kontaktPoWizycie>
+                <rodzajKontaktu>EMAIL</rodzajKontaktu>
+                <wiadomosc>Wypadla plomba, kiedy jest najszybszy mozliwy termin wizyty?</wiadomosc>
+            </kontaktPoWizycie>
+        </stom:wizyta>
+
+        <stom:wizyta id="12">
+            <pacjent id="8">
+                <imie>Agnieszka</imie>
+                <nazwisko>Radwanska</nazwisko>
+                <pesel>00311096729</pesel>
+                <dataRejestracji>2002-08-02</dataRejestracji>
+            </pacjent>
+            <lekarz id="1">
+                <placa>
+                    <kwota>4500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Gregory</imie>
+                <nazwisko>House</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2003-12-11T11:45:14+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>PRZEGLAD</nazwa>
+                <cenaUslugi>
+                    <kwota>50</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
+            <!--1 or more repetitions:-->
+            <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
+        </stom:wizyta>
+
+        <stom:wizyta id="13">
+            <pacjent id="9">
+                <imie>Olga</imie>
+                <nazwisko>Kowalewska</nazwisko>
+                <pesel>98031339442</pesel>
+                <dataRejestracji>2014-05-01</dataRejestracji>
+            </pacjent>
+            <lekarz id="1">
+                <placa>
+                    <kwota>4500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Gregory</imie>
+                <nazwisko>House</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2016-10-12T22:00:14+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>ODBUDOWA</nazwa>
+                <cenaUslugi>
+                    <kwota>250</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
+            <!--1 or more repetitions:-->
+            <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
+            <zuzytySprzetDiagnostyczny>KONCOWKA_STANDARD</zuzytySprzetDiagnostyczny>
+            <zuzytySprzetDiagnostyczny>OLEJ</zuzytySprzetDiagnostyczny>
+            <zuzytySprzetDiagnostyczny>ZGRZEWARKA</zuzytySprzetDiagnostyczny>
+            <!--1 or more repetitions:-->
+            <zuzyteMaterialyStomatologiczne>TASMA_POLIESTROWA</zuzyteMaterialyStomatologiczne>
+            <!--1 or more repetitions:-->
+            <znieczulenia>SRODWEZLOWE</znieczulenia>
+            <kontaktPoWizycie>
+                <rodzajKontaktu>EMAIL</rodzajKontaktu>
+                <wiadomosc>Rosnaca opuchlizna tydzien po zabiegu?</wiadomosc>
+            </kontaktPoWizycie>
+        </stom:wizyta>
+
+        <stom:wizyta id="14">
+            <pacjent id="9">
+                <imie>Olga</imie>
+                <nazwisko>Kowalewska</nazwisko>
+                <pesel>98031339442</pesel>
+                <dataRejestracji>2014-05-01</dataRejestracji>
+            </pacjent>
+            <lekarz id="2">
+                <placa>
+                    <kwota>3500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>James</imie>
+                <nazwisko>Wilson</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2017-08-19T19:27:14+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>PRZEGLAD</nazwa>
+                <cenaUslugi>
+                    <kwota>50</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
+            <!--1 or more repetitions:-->
+            <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
+        </stom:wizyta>
+
+        <stom:wizyta id="15">
+            <pacjent id="10">
+                <imie>Kamila</imie>
+                <nazwisko>Porczyk</nazwisko>
+                <pesel>48042366863</pesel>
+                <dataRejestracji>2012-12-12</dataRejestracji>
+            </pacjent>
+            <lekarz id="4">
+                <placa>
+                    <kwota>3800</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Remy</imie>
+                <nazwisko>Hadley</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <kiedy>2014-02-11T11:12:12+02:00</kiedy>
+            <opisUslugi>
+                <nazwa>WYBIELANIE</nazwa>
+                <cenaUslugi>
+                    <kwota>300</kwota>
+                    <waluta>PLN</waluta>
+                </cenaUslugi>
+            </opisUslugi>
+            <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
+            <!--1 or more repetitions:-->
+            <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
+            <!--1 or more repetitions:-->
+            <zuzyteMaterialyStomatologiczne>PASTY_POLERSKIE</zuzyteMaterialyStomatologiczne>
+        </stom:wizyta>
+    </stom:listaWizyt>
+    <!--Optional:-->
+    <stom:listaPracownikow>
+        <!--1 or more repetitions:-->
+        <stom:lekarz id="1">
+            <placa>
+                <kwota>4500</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>Gregory</imie>
+            <nazwisko>House</nazwisko>
+            <rolaPracownika>LEKARZ</rolaPracownika>
+        </stom:lekarz>
+        <stom:lekarz id="2">
+            <placa>
+                <kwota>3500</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>James</imie>
+            <nazwisko>Wilson</nazwisko>
+            <rolaPracownika>LEKARZ</rolaPracownika>
+        </stom:lekarz>
+        <stom:lekarz id="3">
+            <placa>
+                <kwota>4000</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>Allison</imie>
+            <nazwisko>Cameron</nazwisko>
+            <rolaPracownika>LEKARZ</rolaPracownika>
+        </stom:lekarz>
+        <stom:lekarz id="4">
+            <placa>
+                <kwota>3800</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>Remy</imie>
+            <nazwisko>Hadley</nazwisko>
+            <rolaPracownika>LEKARZ</rolaPracownika>
+        </stom:lekarz>
+        <stom:pracownikCywilny id="5">
+            <placa>
+                <kwota>2000</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>Barbara</imie>
+            <nazwisko>Kowalewska</nazwisko>
+            <rolaPracownika>POMOC</rolaPracownika>
+        </stom:pracownikCywilny>
+        <stom:pracownikCywilny id="6">
+            <placa>
+                <kwota>2200</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>Karolina</imie>
+            <nazwisko>Janikowska</nazwisko>
+            <rolaPracownika>RECEPCJONISTKA</rolaPracownika>
+        </stom:pracownikCywilny>
+        <stom:pracownikCywilny id="7">
+            <placa>
+                <kwota>2200</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>Anna</imie>
+            <nazwisko>Mroz</nazwisko>
+            <rolaPracownika>SEKRETARKA</rolaPracownika>
+        </stom:pracownikCywilny>
+        <stom:pracownikCywilny id="8">
+            <placa>
+                <kwota>2800</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>Tadeusz</imie>
+            <nazwisko>Krajniak</nazwisko>
+            <rolaPracownika>TECHNIK</rolaPracownika>
+        </stom:pracownikCywilny>
+        <stom:pracownikCywilny id="9">
+            <placa>
+                <kwota>2100</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>Krystyna</imie>
+            <nazwisko>Modlinska</nazwisko>
+            <rolaPracownika>SPRZĄTACZKA</rolaPracownika>
+        </stom:pracownikCywilny>
+    </stom:listaPracownikow>
+    <!--Optional:-->
+    <stom:listaRecept>
+        <stom:recepta>
+            <pacjent id="1">
+                <imie>Jan</imie>
+                <nazwisko>Kowalski</nazwisko>
+                <pesel>69072011631</pesel>
+                <dataRejestracji>2008-09-29</dataRejestracji>
+            </pacjent>
+            <lekarz id="1">
+                <placa>
+                    <kwota>4500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Gregory</imie>
+                <nazwisko>House</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <data>2009-08-10</data>
+            <listaLekow>
+                <!--1 or more repetitions:-->
+                <lek>
+                    <nazwa>IBUPROM</nazwa>
+                    <producent>USPHARMACIA</producent>
+                    <procentRefundacji>20</procentRefundacji>
+                </lek>
+            </listaLekow>
+        </stom:recepta>
+        <stom:recepta>
+            <pacjent id="1">
+                <imie>Jan</imie>
+                <nazwisko>Kowalski</nazwisko>
+                <pesel>69072011631</pesel>
+                <dataRejestracji>2008-09-29</dataRejestracji>
+            </pacjent>
+            <lekarz id="3">
+                <placa>
+                    <kwota>4000</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Allison</imie>
+                <nazwisko>Cameron</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <data>2009-08-19</data>
+            <listaLekow>
+                <!--1 or more repetitions:-->
+                <lek>
+                    <nazwa>IBUPROM</nazwa>
+                    <producent>USPHARMACIA</producent>
+                    <procentRefundacji>20</procentRefundacji>
+                </lek>
+            </listaLekow>
+        </stom:recepta>
+        <stom:recepta>
+            <pacjent id="2">
+                <imie>Tomasz</imie>
+                <nazwisko>Adamek</nazwisko>
+                <pesel>51081248492</pesel>
+                <dataRejestracji>2015-10-19</dataRejestracji>
+            </pacjent>
+            <lekarz id="2">
+                <placa>
+                    <kwota>3500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>James</imie>
+                <nazwisko>Wilson</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <data>2016-08-19</data>
+            <listaLekow>
+                <!--1 or more repetitions:-->
+                <lek>
+                    <nazwa>IWHITE</nazwa>
+                    <producent>SIROWA</producent>
+                    <procentRefundacji>0</procentRefundacji>
+                </lek>
+            </listaLekow>
+        </stom:recepta>
+        <stom:recepta>
+            <pacjent id="2">
+                <imie>Tomasz</imie>
+                <nazwisko>Adamek</nazwisko>
+                <pesel>51081248492</pesel>
+                <dataRejestracji>2015-10-19</dataRejestracji>
+            </pacjent>
+            <lekarz id="2">
+                <placa>
+                    <kwota>3500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>James</imie>
+                <nazwisko>Wilson</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <data>2018-01-19</data>
+            <listaLekow>
+                <!--1 or more repetitions:-->
+                <lek>
+                    <nazwa>AUGMENTIN</nazwa>
+                    <producent>GSKPL</producent>
+                    <procentRefundacji>50</procentRefundacji>
+                </lek>
+            </listaLekow>
+        </stom:recepta>
+        <stom:recepta>
+            <pacjent id="6">
+                <imie>Janina</imie>
+                <nazwisko>Kowalska</nazwisko>
+                <pesel>52111116169</pesel>
+                <dataRejestracji>2018-09-11</dataRejestracji>
+            </pacjent>
+            <lekarz id="3">
+                <placa>
+                    <kwota>4000</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Allison</imie>
+                <nazwisko>Cameron</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <data>2019-05-11</data>
+            <listaLekow>
+                <!--1 or more repetitions:-->
+                <lek>
+                    <nazwa>AUGMENTIN</nazwa>
+                    <producent>GSKPL</producent>
+                    <procentRefundacji>50</procentRefundacji>
+                </lek>
+            </listaLekow>
+        </stom:recepta>
+        <stom:recepta>
+            <pacjent id="6">
+                <imie>Janina</imie>
+                <nazwisko>Kowalska</nazwisko>
+                <pesel>52111116169</pesel>
+                <dataRejestracji>2018-09-11</dataRejestracji>
+            </pacjent>
+            <lekarz id="3">
+                <placa>
+                    <kwota>4000</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Allison</imie>
+                <nazwisko>Cameron</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <data>2019-06-01</data>
+            <listaLekow>
+                <!--1 or more repetitions:-->
+                <lek>
+                    <nazwa>AUGMENTIN</nazwa>
+                    <producent>GSKPL</producent>
+                    <procentRefundacji>50</procentRefundacji>
+                </lek>
+            </listaLekow>
+        </stom:recepta>
+        <stom:recepta>
+            <pacjent id="7">
+                <imie>Otylia</imie>
+                <nazwisko>Jedrzejczak</nazwisko>
+                <pesel>85120495545</pesel>
+                <dataRejestracji>2001-04-04</dataRejestracji>
+            </pacjent>
+            <lekarz id="3">
+                <placa>
+                    <kwota>4000</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Allison</imie>
+                <nazwisko>Cameron</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <data>2006-04-11</data>
+            <listaLekow>
+                <!--1 or more repetitions:-->
+                <lek>
+                    <nazwa>IBUPROM</nazwa>
+                    <producent>USPHARMACIA</producent>
+                    <procentRefundacji>20</procentRefundacji>
+                </lek>
+            </listaLekow>
+        </stom:recepta>
+        <stom:recepta>
+            <pacjent id="9">
+                <imie>Olga</imie>
+                <nazwisko>Kowalewska</nazwisko>
+                <pesel>98031339442</pesel>
+                <dataRejestracji>2014-05-01</dataRejestracji>
+            </pacjent>
+            <lekarz id="4">
+                <placa>
+                    <kwota>3800</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Remy</imie>
+                <nazwisko>Hadley</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <data>2016-10-12</data>
+            <listaLekow>
+                <!--1 or more repetitions:-->
+                <lek>
+                    <nazwa>METRONIDAZOL</nazwa>
+                    <producent>USPHARMACIA</producent>
+                    <procentRefundacji>40</procentRefundacji>
+                </lek>
+                <lek>
+                    <nazwa>DENTOSEPT</nazwa>
+                    <producent>PHYTOPHARM</producent>
+                    <procentRefundacji>0</procentRefundacji>
+                </lek>
+            </listaLekow>
+        </stom:recepta>
+    </stom:listaRecept>
+    <!--Optional:-->
+    <stom:terminarzWizyt>
+        <stom:wolnyTermin>
+            <lekarz id="1">
+                <placa>
+                    <kwota>4500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Gregory</imie>
+                <nazwisko>House</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-11T11:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="1">
+                <placa>
+                    <kwota>4500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Gregory</imie>
+                <nazwisko>House</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-12T09:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="1">
+                <placa>
+                    <kwota>4500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Gregory</imie>
+                <nazwisko>House</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-13T17:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="1">
+                <placa>
+                    <kwota>4500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Gregory</imie>
+                <nazwisko>House</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-11T13:00:10+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="2">
+                <placa>
+                    <kwota>3500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>James</imie>
+                <nazwisko>Wilson</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-11T12:00:00+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="2">
+                <placa>
+                    <kwota>3500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>James</imie>
+                <nazwisko>Wilson</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-12T12:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="2">
+                <placa>
+                    <kwota>3500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>James</imie>
+                <nazwisko>Wilson</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-18T11:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="2">
+                <placa>
+                    <kwota>3500</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>James</imie>
+                <nazwisko>Wilson</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-18T08:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="3">
+                <placa>
+                    <kwota>4000</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Allison</imie>
+                <nazwisko>Cameron</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-05T10:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="3">
+                <placa>
+                    <kwota>4000</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Allison</imie>
+                <nazwisko>Cameron</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-11T18:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="3">
+                <placa>
+                    <kwota>4000</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Allison</imie>
+                <nazwisko>Cameron</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-02T11:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="3">
+                <placa>
+                    <kwota>4000</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Allison</imie>
+                <nazwisko>Cameron</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-02T12:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="3">
+                <placa>
+                    <kwota>4000</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Allison</imie>
+                <nazwisko>Cameron</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-07T08:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="4">
+                <placa>
+                    <kwota>3800</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Remy</imie>
+                <nazwisko>Hadley</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-07T09:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="4">
+                <placa>
+                    <kwota>3800</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Remy</imie>
+                <nazwisko>Hadley</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-07T14:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="4">
+                <placa>
+                    <kwota>3800</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Remy</imie>
+                <nazwisko>Hadley</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-07T16:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="4">
+                <placa>
+                    <kwota>3800</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Remy</imie>
+                <nazwisko>Hadley</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-03T15:00:14+02:00</czas>
+        </stom:wolnyTermin>
+        <stom:wolnyTermin>
+            <lekarz id="4">
+                <placa>
+                    <kwota>3800</kwota>
+                    <waluta>PLN</waluta>
+                </placa>
+                <imie>Remy</imie>
+                <nazwisko>Hadley</nazwisko>
+                <rolaPracownika>LEKARZ</rolaPracownika>
+            </lekarz>
+            <czas>2019-07-03T07:00:14+02:00</czas>
+        </stom:wolnyTermin>
+    </stom:terminarzWizyt>
+    <!--Optional:-->
+    <stom:listaUslug>
+        <stom:usluga>
+            <nazwa>USUWANIE</nazwa>
+            <cenaUslugi>
+                <kwota>100</kwota>
+                <waluta>PLN</waluta>
+            </cenaUslugi>
+        </stom:usluga>
+        <stom:usluga>
+            <nazwa>PLOMBOWANIE</nazwa>
+            <cenaUslugi>
+                <kwota>100</kwota>
+                <waluta>PLN</waluta>
+            </cenaUslugi>
+        </stom:usluga>
+        <stom:usluga>
+            <nazwa>LECZENIEKANALOWE</nazwa>
+            <cenaUslugi>
+                <kwota>200</kwota>
+                <waluta>PLN</waluta>
+            </cenaUslugi>
+        </stom:usluga>
+        <stom:usluga>
+            <nazwa>WYBIELANIE</nazwa>
+            <cenaUslugi>
+                <kwota>300</kwota>
+                <waluta>PLN</waluta>
+            </cenaUslugi>
+        </stom:usluga>
+        <stom:usluga>
+            <nazwa>PRZEGLAD</nazwa>
+            <cenaUslugi>
+                <kwota>50</kwota>
+                <waluta>PLN</waluta>
+            </cenaUslugi>
+        </stom:usluga>
+        <stom:usluga>
+            <nazwa>RENTGEN</nazwa>
+            <cenaUslugi>
+                <kwota>70</kwota>
+                <waluta>PLN</waluta>
+            </cenaUslugi>
+        </stom:usluga>
+        <stom:usluga>
+            <nazwa>LAKOWANIE</nazwa>
+            <cenaUslugi>
+                <kwota>150</kwota>
+                <waluta>PLN</waluta>
+            </cenaUslugi>
+        </stom:usluga>
+        <stom:usluga>
+            <nazwa>ODBUDOWA</nazwa>
+            <cenaUslugi>
+                <kwota>250</kwota>
+                <waluta>PLN</waluta>
+            </cenaUslugi>
+        </stom:usluga>
+        <stom:usluga>
+            <nazwa>LAKIEROWANIE</nazwa>
+            <cenaUslugi>
+                <kwota>220</kwota>
+                <waluta>PLN</waluta>
+            </cenaUslugi>
+        </stom:usluga>
+    </stom:listaUslug>
+</stom:gabinetStomatologiczy>
