@@ -48,7 +48,7 @@
 
     <xs:complexType name="listaPracownikow">
         <xs:sequence>
-            <xs:element name="pracownik" type="compl:pracownik" maxOccurs="unbounded">
+            <xs:element name="lekarz" type="compl:lekarz" maxOccurs="unbounded" minOccurs="0">
                 <xs:key name="lekarzId">
                     <xs:selector xpath="gabinetStomatologiczy/listaPracownikow/pracownik"/>
                     <xs:field xpath="@id"/>
@@ -65,6 +65,8 @@
                     <xs:selector xpath="gabinetStomatologiczy/listaUslug/usluga/lekarz"/>
                     <xs:field xpath="@id"/>
                 </xs:keyref>
+            </xs:element>
+            <xs:element name="pracownikCywilny" type="compl:pracownikCywilny" maxOccurs="unbounded" minOccurs="0">
             </xs:element>
         </xs:sequence>
     </xs:complexType>

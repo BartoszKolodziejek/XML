@@ -51,10 +51,10 @@
     <xs:simpleType name="rolaPracownika">
         <xs:restriction base="xs:string">
             <xs:enumeration value="POMOC"/>
-            <xs:enumeration value="RECJEPCJONISTKA"/>
+            <xs:enumeration value="RECEPCJONISTKA"/>
             <xs:enumeration value="SEKRETARKA"/>
             <xs:enumeration value="TECHNIK"/>
-            <xs:enumeration value="SPRATACZKA"/>
+            <xs:enumeration value="SPRZĄTACZKA"/>
         </xs:restriction>
     </xs:simpleType>
 
