@@ -723,13 +723,15 @@
         <pesel>69072011631</pesel>
         <dataRejestracji>2008-09-29</dataRejestracji>
       </pacjent>
-        <lekarz id="1">
-          <placa>
-            <kwota>4000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
+         <lekarz id="1">
+             <placa>
+                 <kwota>4500</kwota>
+                 <waluta>PLN</waluta>
+             </placa>
+             <imie>Gregory</imie>
+             <nazwisko>House</nazwisko>
+             <rolaPracownika>LEKARZ</rolaPracownika>
+         </lekarz>
       <data>2009-08-10</data>
         <listaLekow>
           <!--1 or more repetitions:-->
@@ -747,13 +749,15 @@
         <pesel>69072011631</pesel>
         <dataRejestracji>2008-09-29</dataRejestracji>
       </pacjent>
-      <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-      </lekarz>
+        <lekarz id="3">
+            <placa>
+                <kwota>4000</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>Allison</imie>
+            <nazwisko>Cameron</nazwisko>
+            <rolaPracownika>LEKARZ</rolaPracownika>
+        </lekarz>
       <data>2009-08-19</data>
         <listaLekow>
           <!--1 or more repetitions:-->
@@ -771,13 +775,15 @@
         <pesel>51081248492</pesel>
         <dataRejestracji>2015-10-19</dataRejestracji>
       </pacjent>
-      <lekarz id="3">
-          <placa>
-            <kwota>4500.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-      </lekarz>
+        <lekarz id="2">
+            <placa>
+                <kwota>3500</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>James</imie>
+            <nazwisko>Wilson</nazwisko>
+            <rolaPracownika>LEKARZ</rolaPracownika>
+        </lekarz>
       <data>2016-08-19</data>
         <listaLekow>
           <!--1 or more repetitions:-->
@@ -795,13 +801,15 @@
         <pesel>51081248492</pesel>
         <dataRejestracji>2015-10-19</dataRejestracji>
       </pacjent>
-      <lekarz id="4">
-          <placa>
-            <kwota>5500.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-      </lekarz>
+        <lekarz id="2">
+            <placa>
+                <kwota>3500</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>James</imie>
+            <nazwisko>Wilson</nazwisko>
+            <rolaPracownika>LEKARZ</rolaPracownika>
+        </lekarz>
       <data>2018-01-19</data>
         <listaLekow>
           <!--1 or more repetitions:-->
@@ -819,13 +827,15 @@
         <pesel>52111116169</pesel>
         <dataRejestracji>2018-09-11</dataRejestracji>
       </pacjent>
-      <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-      </lekarz>
+        <lekarz id="3">
+            <placa>
+                <kwota>4000</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>Allison</imie>
+            <nazwisko>Cameron</nazwisko>
+            <rolaPracownika>LEKARZ</rolaPracownika>
+        </lekarz>
       <data>2019-05-11</data>
         <listaLekow>
           <!--1 or more repetitions:-->
@@ -843,13 +853,15 @@
         <pesel>52111116169</pesel>
         <dataRejestracji>2018-09-11</dataRejestracji>
       </pacjent>
-      <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-      </lekarz>
+        <lekarz id="3">
+            <placa>
+                <kwota>4000</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>Allison</imie>
+            <nazwisko>Cameron</nazwisko>
+            <rolaPracownika>LEKARZ</rolaPracownika>
+        </lekarz>
       <data>2019-06-01</data>
         <listaLekow>
           <!--1 or more repetitions:-->
@@ -867,13 +879,15 @@
         <pesel>85120495545</pesel>
         <dataRejestracji>2001-04-04</dataRejestracji>
       </pacjent>
-      <lekarz id="1">
-          <placa>
-            <kwota>4000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-      </lekarz>
+        <lekarz id="3">
+            <placa>
+                <kwota>4000</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>Allison</imie>
+            <nazwisko>Cameron</nazwisko>
+            <rolaPracownika>LEKARZ</rolaPracownika>
+        </lekarz>
       <data>2006-04-11</data>
         <listaLekow>
           <!--1 or more repetitions:-->
@@ -891,13 +905,15 @@
         <pesel>98031339442</pesel>
         <dataRejestracji>2014-05-01</dataRejestracji>
       </pacjent>
-      <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-      </lekarz>
+        <lekarz id="4">
+            <placa>
+                <kwota>3800</kwota>
+                <waluta>PLN</waluta>
+            </placa>
+            <imie>Remy</imie>
+            <nazwisko>Hadley</nazwisko>
+            <rolaPracownika>LEKARZ</rolaPracownika>
+        </lekarz>
       <data>2016-10-12</data>
         <listaLekow>
           <!--1 or more repetitions:-->

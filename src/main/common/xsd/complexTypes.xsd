@@ -85,7 +85,7 @@
 
     <xs:complexType name="listaRecept">
         <xs:sequence>
-            <xs:element name="recepta" type="compl:recepta"/>
+            <xs:element name="recepta" type="compl:recepta" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
