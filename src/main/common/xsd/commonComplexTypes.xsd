@@ -30,19 +30,16 @@
             <xs:element type="tns:usluga" name="opisUslugi"/>
             <xs:element type="tns:kwotaWaluta" name="cenaUslugi"/>
             <xs:element type="simple:rodzajPlatnosci" name="rodzajPlatnosci"/>
-            <xs:element type="simple:sprzetDiagnostyczny" name="zuzytySprzetDiagnostyczny" maxOccurs="unbounded"/>
-            <xs:element type="simple:materialyStomatologiczne" name="zuzyteMaterialyStomatologiczne" maxOccurs="unbounded"/>
-            <xs:element type="simple:znieczulenie" name="znieczulenia" maxOccurs="unbounded"/>
-            <xs:element type="tns:kontaktPoWizycie" name="kontaktPoWizycie" />
+            <xs:element type="simple:sprzetDiagnostyczny" name="zuzytySprzetDiagnostyczny" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="simple:materialyStomatologiczne" name="zuzyteMaterialyStomatologiczne" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="simple:znieczulenie" name="znieczulenia" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="tns:kontaktPoWizycie" name="kontaktPoWizycie" minOccurs="0" />
         </xs:sequence>
         <xs:attribute name="id" type="simple:id" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="kontaktPoWizycie">
         <xs:sequence>
-            <xs:element type="tns:pacjent" name="pacjent"/>
-            <xs:element type="tns:lekarz" name="lekarz"/>
-            <xs:element type="tns:wizyta" name="wizyta"/>
             <xs:element type="simple:rodzajKontaktu" name="rodzajKontaktu" />
             <xs:element type="xs:string" name="wiadomosc" />
         </xs:sequence>
@@ -117,7 +114,7 @@
     <xs:complexType name="usluga">
         <xs:sequence>
             <xs:element type="simple:usluga" name="nazwa"/>
-            <xs:element name="listaLekow" type="tns:listaLekow"/>
+            <xs:element name="listaLekow" type="tns:listaLekow" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

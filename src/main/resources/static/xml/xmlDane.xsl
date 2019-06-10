@@ -99,19 +99,6 @@
       <!--1 or more repetitions:-->
       <znieczulenia>NASIEKOWE</znieczulenia>
       <kontaktPoWizycie>
-        <pacjent id="1">
-          <imie>Jan</imie>
-          <nazwisko>Kowalski</nazwisko>
-          <pesel>69072011631</pesel>
-          <dataRejestracji>2008-09-29</dataRejestracji>
-        </pacjent>
-        <lekarz id="1">
-          <placa>
-            <kwota>4000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
         <rodzajKontaktu>EMAIL</rodzajKontaktu>
         <wiadomosc>Mozliwosc zgloszenia reklamacji?</wiadomosc>
       </kontaktPoWizycie>
@@ -148,19 +135,6 @@
       <!--1 or more repetitions:-->
       <znieczulenia>PRZEWODOWE</znieczulenia>
       <kontaktPoWizycie>
-        <pacjent id="1">
-          <imie>Jan</imie>
-          <nazwisko>Kowalski</nazwisko>
-          <pesel>69072011631</pesel>
-          <dataRejestracji>2008-09-29</dataRejestracji>
-        </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
         <rodzajKontaktu>EMAIL</rodzajKontaktu>
         <wiadomosc>Nadmierny ból po zabiegu. Możliwe działania?</wiadomosc>
       </kontaktPoWizycie>
@@ -287,19 +261,6 @@
       </cenaUslugi>
       <rodzajPlatnosci>KARTA</rodzajPlatnosci>
       <kontaktPoWizycie>
-		<pacjent id="4">
-			<imie>Krystian</imie>
-			<nazwisko>Dabrowski</nazwisko>
-			<pesel>51121932772</pesel>
-			<dataRejestracji>2018-02-05</dataRejestracji>
-		</pacjent>
-        <lekarz id="4">
-          <placa>
-            <kwota>5500.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
         <rodzajKontaktu>EMAIL</rodzajKontaktu>
         <wiadomosc>Brak wyników w umówionym terminie? Prośba o jak najszybsze przesłanie.</wiadomosc>
       </kontaktPoWizycie>
@@ -424,19 +385,6 @@
       <!--1 or more repetitions:-->
       <znieczulenia>NASIEKOWE</znieczulenia>
       <kontaktPoWizycie>
-      <pacjent id="7">
-        <imie>Otylia</imie>
-        <nazwisko>Jedrzejczak</nazwisko>
-        <pesel>85120495545</pesel>
-        <dataRejestracji>2001-04-04</dataRejestracji>
-      </pacjent>
-        <lekarz id="1">
-          <placa>
-            <kwota>4000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
         <rodzajKontaktu>EMAIL</rodzajKontaktu>
         <wiadomosc>Wypadla plomba, kiedy jest najszybszy mozliwy termin wizyty?</wiadomosc>
       </kontaktPoWizycie>
@@ -501,19 +449,6 @@
       <!--1 or more repetitions:-->
       <znieczulenia>SRODWEZLOWE</znieczulenia>
       <kontaktPoWizycie>
-        <pacjent id="1">
-          <imie>Jan</imie>
-          <nazwisko>Kowalski</nazwisko>
-          <pesel>69072011631</pesel>
-          <dataRejestracji>2008-09-29</dataRejestracji>
-        </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
         <rodzajKontaktu>EMAIL</rodzajKontaktu>
         <wiadomosc>Rosnaca opuchlizna tydzien po zabiegu?</wiadomosc>
       </kontaktPoWizycie>
@@ -673,19 +608,6 @@
       <!--1 or more repetitions:-->
       <znieczulenia>NASIEKOWE</znieczulenia>
       <kontaktPoWizycie>
-        <pacjent id="1">
-          <imie>Jan</imie>
-          <nazwisko>Kowalski</nazwisko>
-          <pesel>69072011631</pesel>
-          <dataRejestracji>2008-09-29</dataRejestracji>
-        </pacjent>
-        <lekarz id="1">
-          <placa>
-            <kwota>4000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
         <rodzajKontaktu>EMAIL</rodzajKontaktu>
         <wiadomosc>Mozliwosc zgloszenia reklamacji?</wiadomosc>
       </kontaktPoWizycie>
@@ -746,19 +668,6 @@
       <!--1 or more repetitions:-->
       <znieczulenia>PRZEWODOWE</znieczulenia>
       <kontaktPoWizycie>
-        <pacjent id="1">
-          <imie>Jan</imie>
-          <nazwisko>Kowalski</nazwisko>
-          <pesel>69072011631</pesel>
-          <dataRejestracji>2008-09-29</dataRejestracji>
-        </pacjent>
-        <lekarz id="2">
-          <placa>
-            <kwota>5000.00</kwota>
-            <waluta>PLN</waluta>
-          </placa>
-          <rolaPracownika>LEKARZ</rolaPracownika>
-        </lekarz>
         <rodzajKontaktu>EMAIL</rodzajKontaktu>
         <wiadomosc>Nadmierny ból po zabiegu. Możliwe działania?</wiadomosc>
       </kontaktPoWizycie>
