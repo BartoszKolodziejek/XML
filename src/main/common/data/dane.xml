@@ -730,42 +730,6 @@
           </placa>
           <rolaPracownika>LEKARZ</rolaPracownika>
         </lekarz>
-      <wizyta id="1">
-      <pacjent id="1">
-        <imie>Jan</imie>
-        <nazwisko>Kowalski</nazwisko>
-        <pesel>69072011631</pesel>
-        <dataRejestracji>2008-09-29</dataRejestracji>
-      </pacjent>
-        <kiedy>2009-08-10T19:27:14+02:00</kiedy>
-      <opisUslugi>
-        <nazwa>PLOMBOWANIE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>IBUPROM</nazwa>
-            <producent>USPHARMACIA</producent>
-            <procentRefundacji>20</procentRefundacji>
-          </lek>
-        </listaLekow>
-      </opisUslugi>
-      <cenaUslugi>
-        <kwota>100.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
-      <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
-      <!--1 or more repetitions:-->
-      <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
-	  <zuzytySprzetDiagnostyczny>KONCOWKA_STANDARD</zuzytySprzetDiagnostyczny>
-      <!--1 or more repetitions:-->
-      <zuzyteMaterialyStomatologiczne>TASMA_POLIESTROWA</zuzyteMaterialyStomatologiczne>
-      <!--1 or more repetitions:-->
-      <znieczulenia>NASIEKOWE</znieczulenia>
-      <kontaktPoWizycie>
-        <rodzajKontaktu>EMAIL</rodzajKontaktu>
-        <wiadomosc>Mozliwosc zgloszenia reklamacji?</wiadomosc>
-      </kontaktPoWizycie>
-      </wizyta>
       <data>2009-08-10</data>
         <listaLekow>
           <!--1 or more repetitions:-->
@@ -790,42 +754,6 @@
           </placa>
           <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <wizyta id="2">
-      <pacjent id="1">
-        <imie>Jan</imie>
-        <nazwisko>Kowalski</nazwisko>
-        <pesel>69072011631</pesel>
-        <dataRejestracji>2008-09-29</dataRejestracji>
-      </pacjent>
-        <kiedy>2009-08-19T19:27:14+02:00</kiedy>
-      <opisUslugi>
-        <nazwa>USUWANIE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>IBUPROM</nazwa>
-            <producent>USPHARMACIA</producent>
-            <procentRefundacji>20</procentRefundacji>
-          </lek>
-        </listaLekow>
-      </opisUslugi>
-      <cenaUslugi>
-        <kwota>120.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
-      <rodzajPlatnosci>KARTA</rodzajPlatnosci>
-      <!--1 or more repetitions:-->
-      <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
-	  <zuzytySprzetDiagnostyczny>SZCZYPCE</zuzytySprzetDiagnostyczny>
-      <!--1 or more repetitions:-->
-      <zuzyteMaterialyStomatologiczne>NICI_RETRAKCYJNE</zuzyteMaterialyStomatologiczne>
-      <!--1 or more repetitions:-->
-      <znieczulenia>PRZEWODOWE</znieczulenia>
-      <kontaktPoWizycie>
-        <rodzajKontaktu>EMAIL</rodzajKontaktu>
-        <wiadomosc>Nadmierny ból po zabiegu. Możliwe działania?</wiadomosc>
-      </kontaktPoWizycie>
-      </wizyta>
       <data>2009-08-19</data>
         <listaLekow>
           <!--1 or more repetitions:-->
@@ -850,39 +778,6 @@
           </placa>
           <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <wizyta id="3">
-      <pacjent id="2">
-        <imie>Tomasz</imie>
-        <nazwisko>Adamek</nazwisko>
-        <pesel>51081248492</pesel>
-        <dataRejestracji>2015-10-19</dataRejestracji>
-      </pacjent>
-        <kiedy>2016-08-19T17:27:14+02:00</kiedy>
-      <opisUslugi>
-        <nazwa>WYBIELANIE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>IWHITE</nazwa>
-            <producent>SIROWA</producent>
-            <procentRefundacji>0</procentRefundacji>
-          </lek>
-        </listaLekow>
-      </opisUslugi>
-      <cenaUslugi>
-        <kwota>400.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
-      <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
-      <!--1 or more repetitions:-->
-      <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
-      <!--1 or more repetitions:-->
-      <zuzyteMaterialyStomatologiczne>TASMA_POLIESTROWA</zuzyteMaterialyStomatologiczne>
-	  <zuzyteMaterialyStomatologiczne>PASTY_POLERSKIE</zuzyteMaterialyStomatologiczne>
-	  <zuzyteMaterialyStomatologiczne>KALKI_ARTYKULACYJNE</zuzyteMaterialyStomatologiczne>
-      <!--1 or more repetitions:-->
-      <znieczulenia></znieczulenia>
-      </wizyta>
       <data>2016-08-19</data>
         <listaLekow>
           <!--1 or more repetitions:-->
@@ -907,36 +802,6 @@
           </placa>
           <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <wizyta id="4">
-      <pacjent id="2">
-        <imie>Tomasz</imie>
-        <nazwisko>Adamek</nazwisko>
-        <pesel>51081248492</pesel>
-        <dataRejestracji>2015-10-19</dataRejestracji>
-      </pacjent>
-        <kiedy>2018-01-19T14:00:14+02:00</kiedy>
-      <opisUslugi>
-        <nazwa>LECZENIEKANALOWE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>AUGMENTIN</nazwa>
-            <producent>GSKPL</producent>
-            <procentRefundacji>50</procentRefundacji>
-          </lek>
-        </listaLekow>
-      </opisUslugi>
-      <cenaUslugi>
-        <kwota>200.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
-      <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
-      <!--1 or more repetitions:-->
-      <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
-	  <zuzytySprzetDiagnostyczny>KONCOWKA_PNEUMATYCZNA</zuzytySprzetDiagnostyczny>
-      <!--1 or more repetitions:-->
-      <znieczulenia></znieczulenia>
-      </wizyta>
       <data>2018-01-19</data>
         <listaLekow>
           <!--1 or more repetitions:-->
@@ -961,38 +826,6 @@
           </placa>
           <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <wizyta id="9">
-      <pacjent id="6">
-        <imie>Janina</imie>
-        <nazwisko>Kowalska</nazwisko>
-        <pesel>52111116169</pesel>
-        <dataRejestracji>2018-09-11</dataRejestracji>
-      </pacjent>
-        <kiedy>2019-05-11T11:55:14+02:00</kiedy>
-      <opisUslugi>
-        <nazwa>USUWANIE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>AUGMENTIN</nazwa>
-            <producent>GSKPL</producent>
-            <procentRefundacji>50</procentRefundacji>
-          </lek>
-        </listaLekow>
-      </opisUslugi>
-      <cenaUslugi>
-        <kwota>120.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
-      <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
-      <!--1 or more repetitions:-->
-      <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
-	  <zuzytySprzetDiagnostyczny>KONCOWKA_STANDARD</zuzytySprzetDiagnostyczny>
-      <!--1 or more repetitions:-->
-      <zuzyteMaterialyStomatologiczne>TASMA_POLIESTROWA</zuzyteMaterialyStomatologiczne>
-      <!--1 or more repetitions:-->
-      <znieczulenia>NASIEKOWE</znieczulenia>
-      </wizyta>
       <data>2019-05-11</data>
         <listaLekow>
           <!--1 or more repetitions:-->
@@ -1017,38 +850,6 @@
           </placa>
           <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <wizyta id="10">
-      <pacjent id="6">
-        <imie>Janina</imie>
-        <nazwisko>Kowalska</nazwisko>
-        <pesel>52111116169</pesel>
-        <dataRejestracji>2018-09-11</dataRejestracji>
-      </pacjent>
-        <kiedy>2019-06-01T19:27:14+02:00</kiedy>
-      <opisUslugi>
-        <nazwa>USUWANIE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>AUGMENTIN</nazwa>
-            <producent>GSKPL</producent>
-            <procentRefundacji>50</procentRefundacji>
-          </lek>
-        </listaLekow>
-      </opisUslugi>
-      <cenaUslugi>
-        <kwota>120.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
-      <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
-      <!--1 or more repetitions:-->
-      <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
-	  <zuzytySprzetDiagnostyczny>KONCOWKA_STANDARD</zuzytySprzetDiagnostyczny>
-      <!--1 or more repetitions:-->
-      <zuzyteMaterialyStomatologiczne>TASMA_POLIESTROWA</zuzyteMaterialyStomatologiczne>
-      <!--1 or more repetitions:-->
-      <znieczulenia>NASIEKOWE</znieczulenia>
-      </wizyta>
       <data>2019-06-01</data>
         <listaLekow>
           <!--1 or more repetitions:-->
@@ -1073,36 +874,6 @@
           </placa>
           <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <wizyta id="11">
-      <pacjent id="7">
-        <imie>Otylia</imie>
-        <nazwisko>Jedrzejczak</nazwisko>
-        <pesel>85120495545</pesel>
-        <dataRejestracji>2001-04-04</dataRejestracji>
-      </pacjent>
-        <kiedy>2006-04-11T10:00:00+02:00</kiedy>
-      <opisUslugi>
-        <nazwa>PLOMBOWANIE</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>IBUPROM</nazwa>
-            <producent>USPHARMACIA</producent>
-            <procentRefundacji>20</procentRefundacji>
-          </lek>
-        </listaLekow>
-      </opisUslugi>
-      <cenaUslugi>
-        <kwota>100.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
-      <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
-      <!--1 or more repetitions:-->
-      <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
-	  <zuzytySprzetDiagnostyczny>KONCOWKA_STANDARD</zuzytySprzetDiagnostyczny>
-      <!--1 or more repetitions:-->
-      <znieczulenia>NASIEKOWE</znieczulenia>
-      </wizyta>
       <data>2006-04-11</data>
         <listaLekow>
           <!--1 or more repetitions:-->
@@ -1127,45 +898,6 @@
           </placa>
           <rolaPracownika>LEKARZ</rolaPracownika>
       </lekarz>
-      <wizyta id="13">
-      <pacjent id="9">
-        <imie>Olga</imie>
-        <nazwisko>Kowalewska</nazwisko>
-        <pesel>98031339442</pesel>
-        <dataRejestracji>2014-05-01</dataRejestracji>
-      </pacjent>
-        <kiedy>2016-10-12T22:00:14+02:00</kiedy>
-      <opisUslugi>
-        <nazwa>ODBUDOWA</nazwa>
-        <listaLekow>
-          <!--1 or more repetitions:-->
-          <lek>
-            <nazwa>METRONIDAZOL</nazwa>
-            <producent>USPHARMACIA</producent>
-            <procentRefundacji>40</procentRefundacji>
-          </lek>
-		  <lek>
-            <nazwa>DENTOSEPT</nazwa>
-            <producent>PHYTOPHARM</producent>
-            <procentRefundacji>0</procentRefundacji>
-          </lek>
-        </listaLekow>
-      </opisUslugi>
-      <cenaUslugi>
-        <kwota>500.00</kwota>
-        <waluta>PLN</waluta>
-      </cenaUslugi>
-      <rodzajPlatnosci>GOTOWKA</rodzajPlatnosci>
-      <!--1 or more repetitions:-->
-      <zuzytySprzetDiagnostyczny>DMUCHAWKI</zuzytySprzetDiagnostyczny>
-	  <zuzytySprzetDiagnostyczny>KONCOWKA_STANDARD</zuzytySprzetDiagnostyczny>
-	  <zuzytySprzetDiagnostyczny>OLEJ</zuzytySprzetDiagnostyczny>
-	  <zuzytySprzetDiagnostyczny>ZGRZEWARKA</zuzytySprzetDiagnostyczny>
-      <!--1 or more repetitions:-->
-      <zuzyteMaterialyStomatologiczne>TASMA_POLIESTROWA</zuzyteMaterialyStomatologiczne>
-      <!--1 or more repetitions:-->
-      <znieczulenia>SRODWEZLOWE</znieczulenia>
-      </wizyta>
       <data>2016-10-12</data>
         <listaLekow>
           <!--1 or more repetitions:-->
