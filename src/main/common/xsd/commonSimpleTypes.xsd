@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://math.uni.lodz.pl/stomatologia/simple">
+    <xs:simpleType name="id">
+        <xs:restriction base="xs:long">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="imie">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nazwisko">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="pesel">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{11}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="kwota">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.00"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="rodzajPlatnosci">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="GOTOWKA"/>
+            <xs:enumeration value="KARTA"/>
+            <xs:enumeration value="BLIK"/>
+            <xs:enumeration value="BON"/>
+            <xs:enumeration value="NFZ"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="znieczulenie">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NASIEKOWE"/>
+            <xs:enumeration value="PRZEWODOWE"/>
+            <xs:enumeration value="SRODWEZLOWE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="rolaPracownika">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="POMOC"/>
+            <xs:enumeration value="RECJEPCJONISTKA"/>
+            <xs:enumeration value="SEKRETARKA"/>
+            <xs:enumeration value="TECHNIK"/>
+            <xs:enumeration value="SPRATACZKA"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="procent">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="usluga">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="USUWANIE"/>
+            <xs:enumeration value="PLOMBOWANIE"/>
+            <xs:enumeration value="LECZENIEKANALOWE"/>
+            <xs:enumeration value="WYBIELANIE"/>
+            <xs:enumeration value="PRZEGLAD"/>
+            <xs:enumeration value="RENTGEN"/>
+            <xs:enumeration value="LAKOWANIE"/>
+            <xs:enumeration value="ODBUDOWA"/>
+            <xs:enumeration value="LAKIEROWANIE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="sprzetDiagnostyczny">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DMUCHAWKI"/>
+            <xs:enumeration value="PIASKARKI"/>
+            <xs:enumeration value="SZYBKOZLACZKI"/>
+            <xs:enumeration value="OLEJ"/>
+            <xs:enumeration value="ZGRZEWARKA"/>
+            <xs:enumeration value="KONCOWKA_STANDARD"/>
+            <xs:enumeration value="KONCOWKA_PNEUMATYCZNA"/>
+            <xs:enumeration value="KONCOWKA_SZYBKO_OBROTOWA"/>
+            <xs:enumeration value="SZCZYPCE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="materialyStomatologiczne">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CWIEKI_GUTAPERKOWE"/>
+            <xs:enumeration value="CWIEKI_PAPIEROWE"/>
+            <xs:enumeration value="KALKI_ARTYKULACYJNE"/>
+            <xs:enumeration value="NICI_RETRAKCYJNE"/>
+            <xs:enumeration value="PASTY_POLERSKIE"/>
+            <xs:enumeration value="TASMA_POLIESTROWA"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="rodzajKontaktu">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PLATFORMA_ONLINE"/>
+            <xs:enumeration value="SMS"/>
+            <xs:enumeration value="ROZMOWA_TELEFONICZNA"/>
+            <xs:enumeration value="EMAIL"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

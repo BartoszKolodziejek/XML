@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:simple="http://math.uni.lodz.pl/stomatologia/simple"
+           targetNamespace="http://math.uni.lodz.pl/stomatologia/complex" xmlns:tns="http://math.uni.lodz.pl/stomatologia/complex"
+           xmlns:main="http://math.uni.lodz.pl/stomatologia">
+    <xs:import namespace="http://math.uni.lodz.pl/stomatologia/simple" schemaLocation="commonSimpleTypes.xsd"/>
+    <xs:import namespace="http://math.uni.lodz.pl/stomatologia" schemaLocation="./complexTypes.xsd"/>
+
+
+    <xs:complexType name="kwotaWaluta">
+        <xs:sequence>
+            <xs:element type="simple:kwota" name="kwota"/>
+            <xs:element type="xs:string" fixed="PLN" name="waluta"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="pacjent">
+        <xs:sequence>
+            <xs:element type="simple:imie" name="imie"/>
+            <xs:element type="simple:nazwisko" name="nazwisko"/>
+            <xs:element type="simple:pesel" name="pesel"/>
+            <xs:element type="xs:date" name="dataRejestracji"/>
+        </xs:sequence>
+        <xs:attribute type="simple:id" name="id" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="wizyta">
+        <xs:sequence>
+            <xs:element type="tns:pacjent" name="pacjent"/>
+            <xs:element type="xs:dateTime" name="kiedy"/>
+            <xs:element type="tns:usluga" name="opisUslugi"/>
+            <xs:element type="tns:kwotaWaluta" name="cenaUslugi"/>
+            <xs:element type="simple:rodzajPlatnosci" name="rodzajPlatnosci"/>
+            <xs:element type="simple:sprzetDiagnostyczny" name="zuzytySprzetDiagnostyczny" maxOccurs="unbounded"/>
+            <xs:element type="simple:materialyStomatologiczne" name="zuzyteMaterialyStomatologiczne" maxOccurs="unbounded"/>
+            <xs:element type="simple:znieczulenie" name="znieczulenia" maxOccurs="unbounded"/>
+            <xs:element type="tns:kontaktPoWizycie" name="kontaktPoWizycie" />
+        </xs:sequence>
+        <xs:attribute name="id" type="simple:id" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="kontaktPoWizycie">
+        <xs:sequence>
+            <xs:element type="tns:pacjent" name="pacjent"/>
+            <xs:element type="tns:lekarz" name="lekarz"/>
+            <xs:element type="tns:wizyta" name="wizyta"/>
+            <xs:element type="simple:rodzajKontaktu" name="rodzajKontaktu" />
+            <xs:element type="xs:string" name="wiadomosc" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="pracownik" abstract="true">
+        <xs:sequence>
+            <xs:element name="placa" type="tns:kwotaWaluta"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="simple:id" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="pracownikCywilny" >
+        <xs:complexContent>
+            <xs:extension base="tns:pracownik">
+                <xs:sequence>
+                    <xs:element type="simple:rolaPracownika" name="rolaPracownika"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="lekarz">
+        <xs:complexContent>
+            <xs:extension base="tns:pracownik">
+                <xs:sequence>
+                    <xs:element type="xs:string" name="rolaPracownika" fixed="LEKARZ"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="termin">
+        <xs:sequence>
+            <xs:element type="tns:pacjent" name="pacjent"/>
+            <xs:element type="tns:lekarz" name="lekarz"/>
+            <xs:element type="xs:dateTime" name="czas"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="wolnyTermin">
+        <xs:sequence>
+            <xs:element type="tns:lekarz" name="lekarz"/>
+            <xs:element type="xs:dateTime" name="czas"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="lek">
+        <xs:sequence>
+            <xs:element type="xs:string" name="nazwa"/>
+            <xs:element type="xs:string" name="producent"/>
+            <xs:element type="simple:procent" name="procentRefundacji"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="listaLekow">
+        <xs:sequence>
+            <xs:element type="tns:lek" name="lek" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="recepta">
+        <xs:sequence>
+            <xs:element type="tns:pacjent" name="pacjent"/>
+            <xs:element type="tns:lekarz" name="lekarz"/>
+            <xs:element type="tns:wizyta" name="wizyta"/>
+            <xs:element type="xs:date" name="data"/>
+            <xs:element name="listaLekow" type="tns:listaLekow"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="usluga">
+        <xs:sequence>
+            <xs:element type="simple:usluga" name="nazwa"/>
+            <xs:element name="listaLekow" type="tns:listaLekow"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
